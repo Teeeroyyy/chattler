@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Chattler Admin</title>
+<link rel="icon" href="../assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="../"><img src="../assets/icon.png" alt="" width="28" height="28"><span>Chattler</span><span class="admin-tag">Admin</span></a>
+  <nav>
+    <span class="who" data-who hidden></span>
+    <button class="linkish" type="button" data-logout hidden>Log out</button>
+  </nav>
+</header>
+
+<main class="admin">
+
+  <!-- Signed out -->
+  <section class="panel login" data-view="login" hidden>
+    <img src="../assets/icon.png" alt="" width="64" height="64">
+    <h1>Admin</h1>
+    <p>Log in with the owner's Twitch account to see who uses Chattler.</p>
+    <button class="btn twitch" type="button" data-login>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.3 3 3 6.4v13.4h4.6V22h2.6l2.4-2.2h3.7L21 15V3H4.3Zm15 11.2-2.9 2.9h-4.6l-2.4 2.4v-2.4H5.8V4.7h13.5v9.5ZM16.4 7.8v4.9h-1.7V7.8h1.7Zm-4.6 0v4.9h-1.7V7.8h1.7Z"/></svg>
+      Log in with Twitch
+    </button>
+    <p class="err" data-login-error hidden></p>
+  </section>
+
+  <!-- Waiting for Twitch -->
+  <section class="panel login" data-view="device" hidden>
+    <h1>Finish on Twitch</h1>
+    <p>A Twitch tab has opened — click <b>Authorize</b> there. If Twitch asks for a code, enter:</p>
+    <p class="code" data-code></p>
+    <div class="row">
+      <a class="btn ghost" target="_blank" rel="noopener" data-activate>Open Twitch again</a>
+      <button class="btn ghost" type="button" data-cancel>Cancel</button>
+    </div>
+  </section>
+
+  <!-- Signed in -->
+  <section data-view="users" hidden>
+    <div class="head">
+      <div>
+        <p class="kicker">Admin</p>
+        <h1>Who uses Chattler</h1>
+        <p class="sub">Everyone who has logged into Chattler, newest activity first.</p>
+      </div>
+      <div class="tools">
+        <input type="search" placeholder="Search names" aria-label="Search names" data-search>
+        <select aria-label="Filter" data-filter>
+          <option value="all">Everyone</option>
+          <option value="ok">On the access list</option>
+          <option value="denied">Tried without access</option>
+          <option value="active">Active in the last 7 days</option>
+        </select>
+        <button class="btn ghost" type="button" data-refresh>Refresh</button>
+        <button class="btn ghost" type="button" data-csv>Export CSV</button>
+      </div>
+    </div>
+
+    <div class="stats-row" data-stats></div>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th data-sort="login">Twitch name</th>
+            <th data-sort="status">Access</th>
+            <th data-sort="first_seen">First login</th>
+            <th data-sort="last_seen" class="sorted">Last opened</th>
+            <th data-sort="version">Version</th>
+            <th data-sort="sessions" class="num">Opens</th>
+          </tr>
+        </thead>
+        <tbody data-rows></tbody>
+      </table>
+      <p class="empty" data-empty hidden></p>
+    </div>
+  </section>
+
+  <section class="panel login" data-view="error" hidden>
+    <h1 data-error-title>Something went wrong</h1>
+    <p data-error-text></p>
+    <div class="row">
+      <button class="btn ghost" type="button" data-retry>Try again</button>
+      <button class="btn ghost" type="button" data-switch>Use a different account</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
