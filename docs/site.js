@@ -14,7 +14,7 @@
   // standard "download the installer" line are dropped — the card already says both.
   function notesHtml(body) {
     const lines = (body || '').split(/\r?\n/)
-      .filter((l) => !/^#{1,6}\s/.test(l) && !/download the installer below/i.test(l));
+      .filter((l) => !/^#{1,6}\s/.test(l) && !/download the installer below|no longer available to download/i.test(l));
     let html = '', list = false;
     for (const raw of lines) {
       const l = raw.trim();
