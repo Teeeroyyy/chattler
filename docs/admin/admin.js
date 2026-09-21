@@ -139,7 +139,7 @@
         <td><span class="pill ${pill(u)[0]}"${u.restricted && u.restricted_at ? ` title="Restricted ${esc(fmtDate(u.restricted_at))}"` : ''}>${pill(u)[1]}</span></td>
         <td><time datetime="${esc(u.first_seen)}">${fmtDate(u.first_seen)}</time></td>
         <td><time datetime="${esc(u.last_seen)}">${fmtDate(u.last_seen)}</time><span class="ago">${ago(u.last_seen)}</span></td>
-        <td><span class="ver${latestVersion && u.version && cmpVer(u.version, latestVersion) < 0 ? ' old' : ''}" title="${latestVersion && u.version && cmpVer(u.version, latestVersion) < 0 ? `Behind the latest (${esc(latestVersion)})` : ''}">${esc(u.version || '—')}</span></td>
+        <td><span class="ver${latestVersion && u.version && cmpVer(u.version, latestVersion) < 0 ? ' old' : ''}" title="${latestVersion && u.version && cmpVer(u.version, latestVersion) < 0 ? `Behind the latest (${esc(latestVersion)})` : ''}">${esc(u.version || '-')}</span></td>
         <td class="num">${u.sessions}</td>
         <td class="act">${u.status === 'owner' ? '' : `<button type="button" class="restrict${u.restricted ? ' on' : ''}" data-id="${esc(u.id)}" data-login="${esc(u.login)}">${u.restricted ? 'Unrestrict' : 'Restrict'}</button>`}</td>
       </tr>`).join('');

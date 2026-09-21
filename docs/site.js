@@ -11,7 +11,7 @@
     .replace(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g, '<a href="$2" rel="noopener">$1</a>');
 
   // Just enough Markdown for release notes: bullets and paragraphs. Headings and the
-  // standard "download the installer" line are dropped — the card already says both.
+  // standard "download the installer" line are dropped - the card already says both.
   function notesHtml(body) {
     const lines = (body || '').split(/\r?\n/)
       .filter((l) => !/^#{1,6}\s/.test(l) && !/download the installer below|no longer available to download/i.test(l));
@@ -24,20 +24,20 @@
       if (l) html += `<p>${inline(l)}</p>`;
     }
     if (list) html += '</ul>';
-    return html || '<p class="muted">Maintenance and fixes.</p>';
+    return html;
   }
 
   const fmtDate = (iso) => new Date(iso).toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
   const fmtSize = (b) => `${(b / 1048576).toFixed(0)} MB`;
 
-  function renderReleases(releases) {
+  function renderReleases(releases, latestTag) {
     const box = document.querySelector('[data-releases]');
     const card = (r, i) => `
-      <article class="release${i === 0 ? ' latest' : ''}">
+      <article class="release${r.tag_name === latestTag ? ' latest' : ''}">
         <div class="release-side">
           <span class="release-ver">${esc(r.tag_name.replace(/^v/, ''))}</span>
           <span class="release-date">${fmtDate(r.published_at)}</span>
-          ${i === 0 ? '<span class="tag-latest">Latest</span>' : ''}
+          ${r.tag_name === latestTag ? '<span class="tag-latest">Latest</span>' : ''}
         </div>
         <div class="release-body">${notesHtml(r.body)}</div>
       </article>`;
@@ -72,7 +72,8 @@
       const releases = all.filter((r) => !r.draft && !r.prerelease);
       if (!releases.length) throw new Error('none');
       renderDownload(releases[0]);
-      renderReleases(releases);
+      // Releases published without notes are left out of the history (the download still uses the newest).
+      renderReleases(releases.filter((r) => notesHtml(r.body)), releases[0].tag_name);
     })
     .catch(() => {
       document.querySelectorAll('[data-dl]').forEach((a) => { a.href = FALLBACK; });
