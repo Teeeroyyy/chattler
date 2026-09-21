@@ -59,8 +59,7 @@
         <input type="search" placeholder="Search names" aria-label="Search names" data-search>
         <select aria-label="Filter" data-filter>
           <option value="all">Everyone</option>
-          <option value="ok">On the access list</option>
-          <option value="denied">Tried without access</option>
+          <option value="restricted">Restricted</option>
           <option value="active">Active in the last 7 days</option>
         </select>
         <button class="btn ghost" type="button" data-refresh>Refresh</button>
@@ -75,11 +74,12 @@
         <thead>
           <tr>
             <th data-sort="login">Twitch name</th>
-            <th data-sort="status">Access</th>
+            <th data-sort="restricted">Status</th>
             <th data-sort="first_seen">First login</th>
             <th data-sort="last_seen" class="sorted">Last opened</th>
             <th data-sort="version">Version</th>
             <th data-sort="sessions" class="num">Opens</th>
+            <th class="act"><span class="sr-only">Actions</span></th>
           </tr>
         </thead>
         <tbody data-rows></tbody>
