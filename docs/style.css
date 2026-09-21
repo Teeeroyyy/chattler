@@ -198,3 +198,15 @@ h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; max-width: 720px; }
 .steps a { color: var(--mint); }
 .foot a { color: var(--text-2); }
 .foot a:hover { color: var(--mint); }
+
+/* faq */
+.faq { padding-bottom: 88px !important; }
+.faq-list { display: grid; gap: 10px; max-width: 860px; }
+.faq details { border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); padding: 0 22px; transition: border-color .2s; }
+.faq details[open] { border-color: #33405a; }
+.faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; font: 600 17px var(--body); color: var(--text); }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; font: 400 24px var(--mono); color: var(--mint); line-height: 1; transition: transform .2s; }
+.faq details[open] summary::after { transform: rotate(45deg); }
+.faq details p { margin: 0 0 20px; color: var(--text-2); font-size: 15.5px; }
+.faq details i { font-style: normal; color: var(--text); }
