@@ -33,7 +33,7 @@ body {
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
 }
-img { max-width: 100%; display: block; }
+img { max-width: 100%; height: auto; display: block; }
 a { color: var(--mint); text-decoration: none; }
 a:hover { color: var(--mint-2); }
 h1, h2, h3 { font-family: var(--display); line-height: 1.05; margin: 0; letter-spacing: -.02em; }
@@ -57,14 +57,14 @@ main > section { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
 .nav nav a.nav-cta:hover { background: var(--mint-2); }
 
 /* hero */
-.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 56px; align-items: center; padding-top: 72px !important; padding-bottom: 96px !important; }
+.hero { display: grid; grid-template-columns: 1fr; gap: 64px; justify-items: center; text-align: center; padding-top: 72px !important; padding-bottom: 96px !important; }
 .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 22px; padding: 6px 13px 6px 11px; border: 1px solid var(--line); border-radius: 999px; color: var(--text-2); font-size: 13.5px; background: rgba(255, 255, 255, .02); }
 .pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); box-shadow: 0 0 0 0 rgba(79, 214, 160, .6); animation: pulse 2.2s infinite; }
 @keyframes pulse { 70% { box-shadow: 0 0 0 9px rgba(79, 214, 160, 0); } 100% { box-shadow: 0 0 0 0 rgba(79, 214, 160, 0); } }
 h1 { font-size: clamp(46px, 6.4vw, 84px); font-weight: 800; }
 h1 em { font-style: normal; background: linear-gradient(95deg, var(--mint) 10%, var(--mint-2) 60%, #ffffff); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.lede { font-size: 18.5px; color: var(--text-2); max-width: 470px; margin: 24px 0 34px; }
-.hero-actions { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.lede { font-size: 18.5px; color: var(--text-2); max-width: 560px; margin: 24px auto 34px; }
+.hero-actions { display: flex; align-items: center; justify-content: center; gap: 14px; flex-wrap: wrap; }
 .version-pill { font: 13px var(--mono); color: var(--text-3); }
 
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 22px; border-radius: 12px; font-weight: 600; font-size: 15.5px; transition: transform .15s, box-shadow .15s, background .15s; }
@@ -73,10 +73,9 @@ h1 em { font-style: normal; background: linear-gradient(95deg, var(--mint) 10%, 
 .btn.primary:hover { color: #06251a; transform: translateY(-1px); box-shadow: 0 14px 36px -8px rgba(79, 214, 160, .7), inset 0 1px 0 rgba(255, 255, 255, .35); }
 .btn.big { padding: 15px 26px; font-size: 16.5px; }
 
-.hero-shot { margin: 0; position: relative; }
-.hero-shot::before { content: ""; position: absolute; inset: 8% -4% -6% 6%; background: radial-gradient(closest-side, rgba(79, 214, 160, .28), transparent); filter: blur(30px); z-index: -1; }
-.window { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .09); background: #111318; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, .7); transform: perspective(1600px) rotateY(-7deg) rotateX(2deg); transition: transform .5s ease; }
-.hero-shot:hover .window { transform: perspective(1600px) rotateY(-2deg) rotateX(0deg); }
+.hero-shot { margin: 0; position: relative; width: 100%; max-width: 1040px; }
+.hero-shot::before { content: ""; position: absolute; inset: 6% 4% -4% 4%; background: radial-gradient(closest-side, rgba(79, 214, 160, .28), transparent); filter: blur(30px); z-index: -1; }
+.window { border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .09); background: #111318; box-shadow: 0 40px 80px -20px rgba(0, 0, 0, .7); }
 .window-bar { display: flex; gap: 7px; padding: 10px 13px; background: #0d0f14; border-bottom: 1px solid rgba(255, 255, 255, .05); }
 .window-bar i { width: 10px; height: 10px; border-radius: 50%; background: #2a303c; }
 .hero-shot figcaption { margin-top: 18px; color: var(--text-3); font-size: 13.5px; text-align: center; }
@@ -149,8 +148,7 @@ h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; max-width: 720px; }
 
 /* responsive */
 @media (max-width: 960px) {
-  .hero { grid-template-columns: 1fr; gap: 48px; padding-top: 48px !important; }
-  .window { transform: none; }
+  .hero { gap: 48px; padding-top: 48px !important; }
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .dl-card { grid-template-columns: auto 1fr; }
   .steps { grid-column: 1 / -1; }
