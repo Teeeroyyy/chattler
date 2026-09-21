@@ -192,3 +192,9 @@ h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; max-width: 720px; }
   .pulse { animation: none; }
   .window, .card, .btn { transition: none; }
 }
+
+.btn.ghost-link { color: var(--text); border: 1px solid var(--line); background: rgba(255, 255, 255, .02); }
+.btn.ghost-link:hover { color: var(--text); border-color: #33405a; background: rgba(255, 255, 255, .05); }
+.steps a { color: var(--mint); }
+.foot a { color: var(--text-2); }
+.foot a:hover { color: var(--mint); }
