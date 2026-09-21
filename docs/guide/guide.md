@@ -423,7 +423,7 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 *(The folder is called "Chatter" after one of Chattler's earlier names, so settings carried over.)*
 
 **What's shared**
-- When you open Chattler, it tells Chattler's owner your **Twitch name**, the **version** you're using and **when you last opened it**. Nothing else - not your chats, messages or login - is shared. The owner can use this to restrict an account from using Chattler.
+- Your Twitch login stays encrypted on your PC. Chattler only records your **Twitch username**, the **app version** and **when you last used it**, for usage statistics. Your chats and messages are never shared. Chattler's owner can use this to restrict an account from using Chattler.
 - Chattler talks to Twitch (chat, login, moderation), 7TV, BetterTTV, FrankerFaceZ and ivr.fi (emotes, badges, profiles, live status), recent-messages.robotty.de (chat history - can be turned off in Settings), and GitHub (updates). Links you click open in your normal browser.
 
 ---
