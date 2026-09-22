@@ -73,7 +73,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
 │ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
-│ 📌 Pin  🛡 Mod actions  ★ Subs            ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
+│ 📌 Pin  🛡 Mod actions  ★ Subs  🎥 Streamer                           ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
 │ (◉) Channel  LIVE 1,514 watching  │ (◉) Other channel   Offline           │  ← split headers
 │ Live for 2h · Game · Title…  🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
@@ -81,6 +81,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 │ 🗑 10m 🔨 20:53 name: message      │ 20:53 name: message                   │  ← chat
 │ …                                 │ …                                     │
 │ [ Send a message…            ☺ ] │ [ Send a message…              ☺ ]    │  ← message box
+│ ◔ 1,240 msgs/min                  │ ◔ 12 msgs/min                         │  ← chat meter
 └───────────────────────────────────┴───────────────────────────────────────┘
 ```
 
@@ -97,8 +98,11 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
 - **★ Subs** - opens the [Subs window](#subs-window).
 - **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
-- **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 - **⚙ Settings**.
+
+**Chat meter, under each message box**
+
+Roughly how many messages a minute that chat is getting. Each chat has its own, so with splits you can see at a glance which one is moving. It refreshes every 5 seconds, turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 
 **Tabs** show a **green dot** if someone in the tab is live, the tab name, a **purple dot** for unread messages (red if you were highlighted), and **×** to close.
 
