@@ -96,6 +96,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **📌 Pin** - lock the window in place and keep it on top.
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
 - **★ Subs** - opens the [Subs window](#subs-window).
+- **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
 - **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 - **⚙ Settings**.
 
@@ -388,6 +389,16 @@ Settings → Appearance → **Background transparency** (30-100%). Only the **ba
 - Going below 100% switches the window to see-through mode; Chattler rebuilds the window in place when you let go of the slider (your tabs are kept).
 - In see-through mode, resize the window from its edges and corners.
 
+### Streamer mode (🎥 in the toolbar)
+Safe to show on stream. While it is on:
+
+- Your **Twitch account name** is blurred in the toolbar and in Settings.
+- **Twitch login codes** are blurred - click one to reveal it. Anyone who reads that code off your stream could take over your login.
+- **Sounds are off**: no highlight ding and no AutoMod chime.
+- **Desktop notifications are off**, so nobody else’s message pops up on screen.
+
+Everything else works as normal, and the setting is remembered. You can also switch it from Settings -> Highlights -> **Streamer mode**.
+
 ### Pin (📌 in the toolbar)
 Locks the window **in place** (it can't be moved, resized, maximised or snapped) and keeps it **on top of all other windows** - including games in borderless fullscreen. Click again to unpin. *(Exclusive-fullscreen games can still cover it; Windows doesn't allow any app on top of those.)*
 
@@ -417,6 +428,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Ding sound (with Test) · Highlighted in chat · Flash taskbar · Desktop notification | all On |
 | | AutoMod: Highlight held messages · AutoMod chime (with Test) | both On |
 | | Highlight suspicious users | On |
+| | Streamer mode | Off |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
 | **Chat** | Show deleted messages (greyed and struck through, or hidden) | On |
 | | Load recent messages on join | On |

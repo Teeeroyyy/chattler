@@ -39,7 +39,7 @@
     "name": "Chattler",
     "operatingSystem": "Windows 10, Windows 11",
     "applicationCategory": "CommunicationApplication",
-    "softwareVersion": "1.12.5",
+    "softwareVersion": "1.13.0",
     "url": "https://chattler.net/"
   },
   "author": {
@@ -246,6 +246,7 @@
 <li><strong>📌 Pin</strong> - lock the window in place and keep it on top.</li>
 <li><strong>🛡 Mod actions</strong> - opens the <a href="#mod-actions-window">Mod actions window</a>.</li>
 <li><strong>★ Subs</strong> - opens the <a href="#subs-window">Subs window</a>.</li>
+<li><strong>🎥 Streamer</strong> - <a href="#streamer-mode-in-the-toolbar">Streamer mode</a>: hides your name and login codes, and silences sounds and notifications.</li>
 <li><strong>Chat meter</strong> - roughly how many messages a minute the chat you&#39;re in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it&#39;s flooding (1,500+).</li>
 <li><strong>⚙ Settings</strong>.</li>
 </ul>
@@ -615,6 +616,15 @@
 <li>Going below 100% switches the window to see-through mode; Chattler rebuilds the window in place when you let go of the slider (your tabs are kept).</li>
 <li>In see-through mode, resize the window from its edges and corners.</li>
 </ul>
+<h3 id="streamer-mode-in-the-toolbar"><a class="anchor" href="#streamer-mode-in-the-toolbar" aria-hidden="true">#</a>Streamer mode (🎥 in the toolbar)</h3>
+<p>Safe to show on stream. While it is on:</p>
+<ul>
+<li>Your <strong>Twitch account name</strong> is blurred in the toolbar and in Settings.</li>
+<li><strong>Twitch login codes</strong> are blurred - click one to reveal it. Anyone who reads that code off your stream could take over your login.</li>
+<li><strong>Sounds are off</strong>: no highlight ding and no AutoMod chime.</li>
+<li><strong>Desktop notifications are off</strong>, so nobody else’s message pops up on screen.</li>
+</ul>
+<p>Everything else works as normal, and the setting is remembered. You can also switch it from Settings -&gt; Highlights -&gt; <strong>Streamer mode</strong>.</p>
 <h3 id="pin-in-the-toolbar"><a class="anchor" href="#pin-in-the-toolbar" aria-hidden="true">#</a>Pin (📌 in the toolbar)</h3>
 <p>Locks the window <strong>in place</strong> (it can&#39;t be moved, resized, maximised or snapped) and keeps it <strong>on top of all other windows</strong> - including games in borderless fullscreen. Click again to unpin. <em>(Exclusive-fullscreen games can still cover it; Windows doesn&#39;t allow any app on top of those.)</em></p>
 <h3 id="tab-position"><a class="anchor" href="#tab-position" aria-hidden="true">#</a>Tab position</h3>
@@ -691,6 +701,11 @@
 <td></td>
 <td>Highlight suspicious users</td>
 <td>On</td>
+</tr>
+<tr>
+<td></td>
+<td>Streamer mode</td>
+<td>Off</td>
 </tr>
 <tr>
 <td><strong>Monitored users</strong></td>
@@ -881,7 +896,7 @@
 <p><strong>Windows says &quot;Windows protected your PC&quot; when installing.</strong> Expected, because the installer isn&#39;t code-signed: <strong>More info → Run anyway</strong>.</p>
 <p><strong>How do I remove Chattler?</strong> Windows Settings → Apps → <strong>Chattler</strong> → Uninstall.</p>
 
-    <p class="guide-foot">Written for Chattler 1.12.5. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
+    <p class="guide-foot">Written for Chattler 1.13.0. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
   </article>
 </div>
 
