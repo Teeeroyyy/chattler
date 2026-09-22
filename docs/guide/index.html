@@ -39,7 +39,7 @@
     "name": "Chattler",
     "operatingSystem": "Windows 10, Windows 11",
     "applicationCategory": "CommunicationApplication",
-    "softwareVersion": "1.10.1",
+    "softwareVersion": "1.11.0",
     "url": "https://chattler.net/"
   },
   "author": {
@@ -109,6 +109,7 @@
       <li><a href="#user-cards">User cards</a></li>
       <li><a href="#moderation">Moderation</a></li>
       <li><a href="#automod">AutoMod</a></li>
+      <li><a href="#suspicious-users">Suspicious users</a></li>
       <li><a href="#window-options">Window options</a></li>
       <li><a href="#settings-reference">Settings reference</a></li>
       <li><a href="#keyboard-shortcuts-and-mouse-tricks">Keyboard shortcuts and mouse tricks</a></li>
@@ -189,6 +190,10 @@
 <td>Held messages appear right in the chat with <strong>Allow</strong> and <strong>Deny</strong>, the reason they were held, and the flagged words underlined.</td>
 </tr>
 <tr>
+<td><strong>Suspicious users</strong></td>
+<td>Likely ban evaders and monitored people stand out in red; restricted people’s hidden messages are shown to moderators.</td>
+</tr>
+<tr>
 <td><strong>Window</strong></td>
 <td>Background-only transparency, a pin that locks the window in place and keeps it on top, and three themes.</td>
 </tr>
@@ -239,7 +244,7 @@
 <ul>
 <li><strong>📌 Pin</strong> - lock the window in place and keep it on top.</li>
 <li><strong>🛡 Mod actions</strong> - opens the <a href="#mod-actions-window">Mod actions window</a>.</li>
-<li><strong>Chat meter</strong> - roughly how many messages a minute the chat you&#39;re in is getting, and which chat that is. It turns amber when a chat is busy (300+ a minute) and red when it&#39;s flooding (1,500+).</li>
+<li><strong>Chat meter</strong> - roughly how many messages a minute the chat you&#39;re in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it&#39;s flooding (1,500+).</li>
 <li><strong>⚙ Settings</strong>.</li>
 </ul>
 <p><strong>Tabs</strong> show a <strong>green dot</strong> if someone in the tab is live, the tab name, a <strong>purple dot</strong> for unread messages (red if you were highlighted), and <strong>×</strong> to close.</p>
@@ -580,6 +585,16 @@
 <li><strong>AutoMod chime</strong> - a sound when AutoMod holds a message. It&#39;s different from the highlight ding, so you can tell them apart. <strong>Test</strong> plays it.</li>
 </ul>
 <hr>
+<h2 id="suspicious-users"><a class="anchor" href="#suspicious-users" aria-hidden="true">#</a>Suspicious users</h2>
+<p>Twitch quietly flags people who look like trouble: <strong>likely ban evaders</strong>, people <strong>banned in channels that share bans</strong>, and anyone a moderator has <strong>marked by hand</strong>. In channels you moderate, Chattler shows them.</p>
+<ul>
+<li><strong>Monitored people:</strong> their messages appear in chat as normal, with a <strong>red tint</strong> and a tag saying <strong>Monitored</strong>. Hover the tag to see why Twitch flagged them.</li>
+<li><strong>Restricted people:</strong> their messages never reach chat at all - nobody else sees them. Chattler shows them to moderators as a <strong>red card</strong> marked &quot;only moderators see this&quot;, so you can decide what to do.</li>
+<li><strong>Setting someone&#39;s status:</strong> on those cards, <strong>Monitor</strong>, <strong>Restrict</strong> and <strong>No restrictions</strong> change how Twitch treats them, the same as Twitch&#39;s own mod tools.</li>
+<li><strong>Changes are logged:</strong> when anyone on the team changes a person&#39;s status, it appears in the <a href="#mod-actions-window">Mod actions window</a>, for example &quot;Ottertail marked Watched as restricted&quot;.</li>
+<li><strong>Turning the tint off:</strong> Settings -&gt; Highlights -&gt; <strong>Highlight suspicious users</strong>. The tag stays either way.</li>
+</ul>
+<p>This needs Chattler&#39;s suspicious-users permissions. If you logged in before this feature existed, log out and use <strong>Log in with Twitch</strong> again.</p>
 <h2 id="window-options"><a class="anchor" href="#window-options" aria-hidden="true">#</a>Window options</h2>
 <h3 id="background-transparency"><a class="anchor" href="#background-transparency" aria-hidden="true">#</a>Background transparency</h3>
 <p>Settings → Appearance → <strong>Background transparency</strong> (30-100%). Only the <strong>background</strong> fades - text, names, emotes and badges stay solid, so you can put Chattler over a game or stream. Settings, popups and user cards stay solid so they&#39;re readable.</p>
@@ -658,6 +673,11 @@
 <td></td>
 <td>AutoMod: Highlight held messages · AutoMod chime (with Test)</td>
 <td>both On</td>
+</tr>
+<tr>
+<td></td>
+<td>Highlight suspicious users</td>
+<td>On</td>
 </tr>
 <tr>
 <td><strong>Monitored users</strong></td>
@@ -838,6 +858,7 @@
 <h2 id="troubleshooting-and-faq"><a class="anchor" href="#troubleshooting-and-faq" aria-hidden="true">#</a>Troubleshooting and FAQ</h2>
 <p><strong>I don&#39;t see mod buttons.</strong> You need to be a moderator (or the broadcaster) in <em>that</em> channel. Also check the chat&#39;s <strong>🔨</strong> toggle isn&#39;t switched off, and Settings → Moderation → Quick buttons.</p>
 <p><strong>Staff history only shows my own entries.</strong> Team history comes from other moderators using Chattler 1.9 or later. If nobody else on the team uses it yet, you&#39;ll only see what your own Chattler recorded.</p>
+<p><strong>Suspicious users aren&#39;t showing.</strong>  This needs newer Twitch permissions. Log out (Settings -&gt; Account) and use <strong>Log in with Twitch</strong> again. It only works in channels you moderate.</p>
 <p><strong>Staff history, &quot;who timed them out&quot; or AutoMod isn&#39;t working.</strong> These need extra Twitch permissions that older logins don&#39;t have. Log out (Settings → Account) and use <strong>Log in with Twitch</strong> again, approving the permissions.</p>
 <p><strong>I only see &quot;Redeemed a channel points reward&quot;, not the reward name.</strong> Twitch only shares reward names with the broadcaster, so full details appear in your own channel only.</p>
 <p><strong>Chat stopped moving.</strong> Your mouse is probably over it (pause while hovering) - look for the <strong>&quot;Paused while hovering&quot;</strong> pill, or move the mouse away. Scrolled up? Click <strong>More messages below</strong>.</p>
@@ -847,7 +868,7 @@
 <p><strong>Windows says &quot;Windows protected your PC&quot; when installing.</strong> Expected, because the installer isn&#39;t code-signed: <strong>More info → Run anyway</strong>.</p>
 <p><strong>How do I remove Chattler?</strong> Windows Settings → Apps → <strong>Chattler</strong> → Uninstall.</p>
 
-    <p class="guide-foot">Written for Chattler 1.10.1. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
+    <p class="guide-foot">Written for Chattler 1.11.0. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
   </article>
 </div>
 

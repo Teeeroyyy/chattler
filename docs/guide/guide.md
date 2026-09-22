@@ -41,6 +41,7 @@ Chattler is a fast, modern Twitch chat client for Windows. Watch and take part i
 | **User cards** | Click any name: profile, their recent messages, pin, move and resize the card, monitor them with a colour, and (for mods) moderation and staff history. |
 | **Moderation** | One-click delete, timeout and ban on every line (with Undo), timeout lines that say which mod did it, chat pauses while you hover, chat modes, slash commands, **Staff history** and **Monitor user**. |
 | **AutoMod** | Held messages appear right in the chat with **Allow** and **Deny**, the reason they were held, and the flagged words underlined. |
+| **Suspicious users** | Likely ban evaders and monitored people stand out in red; restricted people’s hidden messages are shown to moderators. |
 | **Window** | Background-only transparency, a pin that locks the window in place and keeps it on top, and three themes. |
 | **Updates** | Installs updates by itself. |
 
@@ -94,7 +95,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 
 - **📌 Pin** - lock the window in place and keep it on top.
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
-- **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
+- **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 - **⚙ Settings**.
 
 **Tabs** show a **green dot** if someone in the tab is live, the tab name, a **purple dot** for unread messages (red if you were highlighted), and **×** to close.
@@ -356,6 +357,18 @@ If you moderate a channel that uses AutoMod, **messages AutoMod holds for review
 
 ---
 
+## Suspicious users
+
+Twitch quietly flags people who look like trouble: **likely ban evaders**, people **banned in channels that share bans**, and anyone a moderator has **marked by hand**. In channels you moderate, Chattler shows them.
+
+- **Monitored people:** their messages appear in chat as normal, with a **red tint** and a tag saying **Monitored**. Hover the tag to see why Twitch flagged them.
+- **Restricted people:** their messages never reach chat at all - nobody else sees them. Chattler shows them to moderators as a **red card** marked "only moderators see this", so you can decide what to do.
+- **Setting someone's status:** on those cards, **Monitor**, **Restrict** and **No restrictions** change how Twitch treats them, the same as Twitch's own mod tools.
+- **Changes are logged:** when anyone on the team changes a person's status, it appears in the [Mod actions window](#mod-actions-window), for example "Ottertail marked Watched as restricted".
+- **Turning the tint off:** Settings -> Highlights -> **Highlight suspicious users**. The tag stays either way.
+
+This needs Chattler's suspicious-users permissions. If you logged in before this feature existed, log out and use **Log in with Twitch** again.
+
 ## Window options
 
 ### Background transparency
@@ -391,6 +404,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | **Highlights** | Highlight words | none |
 | | Ding sound (with Test) · Highlighted in chat · Flash taskbar · Desktop notification | all On |
 | | AutoMod: Highlight held messages · AutoMod chime (with Test) | both On |
+| | Highlight suspicious users | On |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
 | **Chat** | Show deleted messages (greyed and struck through, or hidden) | On |
 | | Load recent messages on join | On |
@@ -463,6 +477,8 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 **I don't see mod buttons.** You need to be a moderator (or the broadcaster) in *that* channel. Also check the chat's **🔨** toggle isn't switched off, and Settings → Moderation → Quick buttons.
 
 **Staff history only shows my own entries.** Team history comes from other moderators using Chattler 1.9 or later. If nobody else on the team uses it yet, you'll only see what your own Chattler recorded.
+
+**Suspicious users aren't showing.**  This needs newer Twitch permissions. Log out (Settings -> Account) and use **Log in with Twitch** again. It only works in channels you moderate.
 
 **Staff history, "who timed them out" or AutoMod isn't working.** These need extra Twitch permissions that older logins don't have. Log out (Settings → Account) and use **Log in with Twitch** again, approving the permissions.
 
