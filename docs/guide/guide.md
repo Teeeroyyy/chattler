@@ -81,7 +81,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 │ 🗑 10m 🔨 20:53 name: message      │ 20:53 name: message                   │  ← chat
 │ …                                 │ …                                     │
 │ [ Send a message…            ☺ ] │ [ Send a message…              ☺ ]    │  ← message box
-│ ◔ 1,240 msgs/min                  │ ◔ 12 msgs/min                         │  ← chat meter
+│ ◔ 1,240 msgs/min    Chattler 1.0  │ ◔ 12 msgs/min        Chattler 1.0     │  ← meter, version
 └───────────────────────────────────┴───────────────────────────────────────┘
 ```
 
@@ -103,6 +103,8 @@ You only log in once; Chattler renews your login in the background. To switch ac
 **Chat meter, under each message box**
 
 Roughly how many messages a minute that chat is getting. Each chat has its own, so with splits you can see at a glance which one is moving. It refreshes every 5 seconds, turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
+
+On the right of the same line is the **version you're on**, like *Chattler 1.13.3*. Handy when you're reporting something. Chattler updates itself, so this should match the newest version on the website within about half an hour of a release.
 
 **Tabs** show a **green dot** if someone in the tab is live, the tab name, a **purple dot** for unread messages (red if you were highlighted), and **×** to close.
 
