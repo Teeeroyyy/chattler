@@ -73,7 +73,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
 │ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
-│ 📌 Pin   🛡 Mod actions                    ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
+│ 📌 Pin  🛡 Mod actions  ★ Subs            ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
 │ (◉) Channel  LIVE 1,514 watching  │ (◉) Other channel   Offline           │  ← split headers
 │ Live for 2h · Game · Title…  🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
@@ -95,6 +95,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 
 - **📌 Pin** - lock the window in place and keep it on top.
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
+- **★ Subs** - opens the [Subs window](#subs-window).
 - **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 - **⚙ Settings**.
 
@@ -337,6 +338,14 @@ Click **Mod actions** in the toolbar to open a window listing **every moderator 
 - It opens with recent history from your PC **and from your mod team** - actions other moderators’ Chattler recorded while yours was closed (last 7 days) - then fills in live.
 - If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.
 - It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
+
+### Subs window
+Click **Subs** in the toolbar for a window listing **every subscription, resub, gift and Prime upgrade** in your open chats, newest at the bottom. Sub notices keep appearing in chat as usual - this is an extra place to watch them all together.
+
+- Lines read like “MintyMoss subscribed with Prime”, “Quillfeather resubscribed at Tier 1 - 14 months, 5 month streak”, “BytePilot gifted a Tier 1 sub to lanternjay” and “Ottertail gifted 10 Tier 2 subs to the channel”, with anything the subscriber wrote quoted underneath.
+- The header counts this session’s subs and gifted subs.
+- Like the Mod actions window: move it anywhere, resize it, pin it on top, filter by channel, and click a name to open that person’s user card.
+- It works in **every chat you have open**, not only channels you moderate, and needs no extra permissions.
 
 ### Monitor user
 Tick **Monitor user** on someone's card and pick a colour. All their messages in **that channel** get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you're monitoring in **Settings → Monitored users**.

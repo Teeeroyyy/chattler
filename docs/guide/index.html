@@ -39,7 +39,7 @@
     "name": "Chattler",
     "operatingSystem": "Windows 10, Windows 11",
     "applicationCategory": "CommunicationApplication",
-    "softwareVersion": "1.11.1",
+    "softwareVersion": "1.12.0",
     "url": "https://chattler.net/"
   },
   "author": {
@@ -223,7 +223,7 @@
 <h2 id="a-tour-of-the-window"><a class="anchor" href="#a-tour-of-the-window" aria-hidden="true">#</a>A tour of the window</h2>
 <pre><code>┌───────────────────────────────────────────────────────────────────────────┐
 │ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
-│ 📌 Pin   🛡 Mod actions                    ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
+│ 📌 Pin  🛡 Mod actions  ★ Subs            ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
 │ (◉) Channel  LIVE 1,514 watching  │ (◉) Other channel   Offline           │  ← split headers
 │ Live for 2h · Game · Title…  🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
@@ -244,6 +244,7 @@
 <ul>
 <li><strong>📌 Pin</strong> - lock the window in place and keep it on top.</li>
 <li><strong>🛡 Mod actions</strong> - opens the <a href="#mod-actions-window">Mod actions window</a>.</li>
+<li><strong>★ Subs</strong> - opens the <a href="#subs-window">Subs window</a>.</li>
 <li><strong>Chat meter</strong> - roughly how many messages a minute the chat you&#39;re in is getting, and which chat that is. It refreshes every 5 seconds. It turns amber when a chat is busy (300+ a minute) and red when it&#39;s flooding (1,500+).</li>
 <li><strong>⚙ Settings</strong>.</li>
 </ul>
@@ -567,6 +568,14 @@
 <li>If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.</li>
 <li>It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.</li>
 </ul>
+<h3 id="subs-window"><a class="anchor" href="#subs-window" aria-hidden="true">#</a>Subs window</h3>
+<p>Click <strong>Subs</strong> in the toolbar for a window listing <strong>every subscription, resub, gift and Prime upgrade</strong> in your open chats, newest at the bottom. Sub notices keep appearing in chat as usual - this is an extra place to watch them all together.</p>
+<ul>
+<li>Lines read like “MintyMoss subscribed with Prime”, “Quillfeather resubscribed at Tier 1 - 14 months, 5 month streak”, “BytePilot gifted a Tier 1 sub to lanternjay” and “Ottertail gifted 10 Tier 2 subs to the channel”, with anything the subscriber wrote quoted underneath.</li>
+<li>The header counts this session’s subs and gifted subs.</li>
+<li>Like the Mod actions window: move it anywhere, resize it, pin it on top, filter by channel, and click a name to open that person’s user card.</li>
+<li>It works in <strong>every chat you have open</strong>, not only channels you moderate, and needs no extra permissions.</li>
+</ul>
 <h3 id="monitor-user"><a class="anchor" href="#monitor-user" aria-hidden="true">#</a>Monitor user</h3>
 <p>Tick <strong>Monitor user</strong> on someone&#39;s card and pick a colour. All their messages in <strong>that channel</strong> get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you&#39;re monitoring in <strong>Settings → Monitored users</strong>.</p>
 <hr>
@@ -871,7 +880,7 @@
 <p><strong>Windows says &quot;Windows protected your PC&quot; when installing.</strong> Expected, because the installer isn&#39;t code-signed: <strong>More info → Run anyway</strong>.</p>
 <p><strong>How do I remove Chattler?</strong> Windows Settings → Apps → <strong>Chattler</strong> → Uninstall.</p>
 
-    <p class="guide-foot">Written for Chattler 1.11.1. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
+    <p class="guide-foot">Written for Chattler 1.12.0. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
   </article>
 </div>
 
