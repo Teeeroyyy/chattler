@@ -22,6 +22,17 @@
 <meta name="twitter:image" content="https://chattler.net/assets/og.png">
 <link rel="icon" href="assets/icon.png">
 <link rel="apple-touch-icon" href="assets/icon.png">
+<!-- seo:start -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Chattler",
+  "url": "https://chattler.net/",
+  "description": "Chattler, a fast, free Twitch chat client for Windows.",
+  "inLanguage": "en"
+}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,10 +42,34 @@
   "description": "A fast, free Twitch chat client for Windows with tabs and splits, 7TV, BetterTTV and FrankerFaceZ emotes, and one-click moderation tools including AutoMod, staff history and user cards.",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Windows 10, Windows 11",
-  "image": "https://chattler.net/assets/og.png",
-  "screenshot": "https://chattler.net/assets/screenshot.png",
+  "softwareVersion": "1.7.3",
+  "releaseNotes": "https://chattler.net/#releases",
   "downloadUrl": "https://chattler.net/#download",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  "installUrl": "https://chattler.net/#download",
+  "image": "https://chattler.net/assets/og.png",
+  "screenshot": [
+    "https://chattler.net/assets/screenshot.png",
+    "https://chattler.net/assets/card-messages.png",
+    "https://chattler.net/assets/card-staff.png"
+  ],
+  "featureList": [
+    "Tabs and resizable splits",
+    "7TV, BetterTTV and FrankerFaceZ emotes",
+    "Highlights with sound, taskbar flash and desktop notifications",
+    "One-click delete, timeout and ban with Undo",
+    "AutoMod held messages in chat with Allow and Deny",
+    "Timeout lines that name the moderator",
+    "Staff history and Monitor user",
+    "Pinnable, moveable and resizable user cards",
+    "Channel point redemptions in chat",
+    "Background transparency and pin-on-top window",
+    "Automatic updates"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -42,14 +77,58 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Is Chattler free?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Chattler is free to download and use, with no ads and no paid tiers." } },
-    { "@type": "Question", "name": "How is Chattler different from other Twitch chat clients?", "acceptedAnswer": { "@type": "Answer", "text": "Chattler has everything you expect from a desktop Twitch chat client - tabs, splits and 7TV, BetterTTV and FrankerFaceZ emotes - plus a modern design and moderation tools built for fast chats: AutoMod held messages in the chat, timeout lines that name the moderator, a per-user staff history, and pinnable, resizable user cards." } },
-    { "@type": "Question", "name": "Do I have to be a moderator to use it?", "acceptedAnswer": { "@type": "Answer", "text": "No. Anyone can use Chattler to read and chat. Moderation tools only appear in channels where you're a moderator or the broadcaster." } },
-    { "@type": "Question", "name": "Why does Windows say it protected my PC?", "acceptedAnswer": { "@type": "Answer", "text": "The installer isn't code-signed yet, so Windows SmartScreen shows a warning for new downloads. Click More info, then Run anyway. Chattler installs just for your Windows account and doesn't need admin rights." } },
-    { "@type": "Question", "name": "Does it work on Mac or Linux?", "acceptedAnswer": { "@type": "Answer", "text": "Not yet. Chattler is for Windows 10 and 11." } }
+    {
+      "@type": "Question",
+      "name": "Is Chattler free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Chattler is free to download and use, with no ads and no paid tiers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is Chattler different from other Twitch chat clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Chattler has everything you expect from a desktop Twitch chat client - tabs, splits and 7TV, BetterTTV and FrankerFaceZ emotes - plus a modern design and moderation tools built for fast chats: AutoMod held messages right in the chat, timeout lines that name the moderator, a per-user staff history, and pinnable, resizable user cards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I have to be a moderator to use it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Anyone can use Chattler to read and chat. Moderation tools only appear in channels where you're a moderator or the broadcaster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does Windows say it protected my PC?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The installer isn't code-signed yet, so Windows SmartScreen shows a warning for new downloads. Click More info → Run anyway. Chattler installs just for your Windows account and doesn't need admin rights."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work on Mac or Linux?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not yet. Chattler is for Windows 10 and 11."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does Chattler share?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Your Twitch login stays encrypted on your PC. Chattler only records your Twitch username, the app version and when you last used it, for usage statistics. Your messages are never shared. See Privacy in the user guide."
+      }
+    }
   ]
 }
 </script>
+<!-- seo:end -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
