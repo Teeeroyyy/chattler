@@ -239,6 +239,13 @@ Click any **username** (or an `@mention`) to open their card.
 - **Resize it** from the bottom-right corner. Chattler remembers the size for the next card you open.
 - Cards always stay on screen, even if you shrink the window.
 
+**Popping a card out of the window**
+- **Drag a card past the edge of Chattler's window** and let go, or click its **pop-out** button (the square with an arrow, next to the pin). The card becomes its own small window you can put **anywhere on your screen** - beside Chattler, over a game, or on another monitor.
+- Move it by dragging its header, and resize it from its edges.
+- It's the same live card: new messages, moderation buttons, Staff history and Monitor user all keep working. It's always pinned.
+- It stays above Chattler, and above games too when the main window is pinned (📌).
+- Close it with its **×**. Popped-out cards close when Chattler closes.
+
 **Pinning a card** (the pin in the card's top-right corner)
 - The card stays open and doesn't close when you click elsewhere. Pin as many as you like.
 - It keeps **adding that person's new messages live**, plus their timeouts and bans, and greys out deleted lines.
@@ -394,6 +401,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 |---|---|
 | Click a username | Open their user card |
 | Drag a user card's header / corner | Move / resize the card |
+| Drag a user card out of the window | Pop it out, so it can go anywhere on screen |
 | Drag a tab | Reorder tabs |
 | Double-click a tab | Rename it |
 | Middle-click a tab | Close it |
