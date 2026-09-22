@@ -39,7 +39,7 @@
     "name": "Chattler",
     "operatingSystem": "Windows 10, Windows 11",
     "applicationCategory": "CommunicationApplication",
-    "softwareVersion": "1.8.0",
+    "softwareVersion": "1.9.0",
     "url": "https://chattler.net/"
   },
   "author": {
@@ -536,7 +536,14 @@
 <li>A summary at the top shows where they stand now (for example <strong>&quot;Timed out until 20:42 - by Nightbot&quot;</strong> or <strong>&quot;Banned&quot;</strong>) and totals (<em>2 timeouts · 1 deleted message · 1 warning</em>).</li>
 <li>It updates live while the card is open; a green dot shows it&#39;s recording.</li>
 </ul>
-<p>Chattler listens to Twitch&#39;s moderation feed while it&#39;s running and saves every action on your PC, so history builds up over time. Twitch doesn&#39;t provide history from before you started using Chattler.</p>
+<p>Where the history comes from:</p>
+<ul>
+<li><strong>Your PC:</strong> Chattler listens to Twitch&#39;s moderation feed while it&#39;s running and saves every action, so history builds up over time. It&#39;s kept by Twitch account, so someone changing their name keeps their history, and up to 200 entries are kept per person.</li>
+<li><strong>Your mod team:</strong> every moderator using Chattler shares the actions they see, so the card shows the whole team&#39;s history for that person - including things that happened while you were offline. A line at the top says how many entries came from other moderators. Only moderators of that channel can see it.</li>
+<li><strong>Unban requests:</strong> every unban request the person has made in that channel, what they wrote, and whether a moderator approved or denied it (with the reply).</li>
+<li><strong>Your own channel:</strong> Twitch confirms whether they&#39;re banned or timed out right now, and a waiting unban request is shown at the top.</li>
+</ul>
+<p>Twitch doesn&#39;t let apps download a channel&#39;s full moderation history, so actions from before anyone on the team used Chattler can&#39;t be shown.</p>
 <h3 id="monitor-user"><a class="anchor" href="#monitor-user" aria-hidden="true">#</a>Monitor user</h3>
 <p>Tick <strong>Monitor user</strong> on someone&#39;s card and pick a colour. All their messages in <strong>that channel</strong> get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you&#39;re monitoring in <strong>Settings → Monitored users</strong>.</p>
 <hr>
@@ -809,11 +816,13 @@
 <p><strong>What&#39;s shared</strong></p>
 <ul>
 <li>Your Twitch login stays encrypted on your PC. Chattler only records your <strong>Twitch username</strong>, the <strong>app version</strong> and <strong>when you last used it</strong>, for usage statistics. Your chats and messages are never shared. Chattler&#39;s owner can use this to restrict an account from using Chattler.</li>
+<li><strong>If you&#39;re a moderator:</strong> the moderation actions you see in channels you moderate (bans, timeouts, deleted messages, warnings, VIP and mod changes) are shared with that channel&#39;s other moderators for their Staff history. Only confirmed moderators of that channel can see them.</li>
 <li>Chattler talks to Twitch (chat, login, moderation), 7TV, BetterTTV, FrankerFaceZ and ivr.fi (emotes, badges, profiles, live status), recent-messages.robotty.de (chat history - can be turned off in Settings), and GitHub (updates). Links you click open in your normal browser.</li>
 </ul>
 <hr>
 <h2 id="troubleshooting-and-faq"><a class="anchor" href="#troubleshooting-and-faq" aria-hidden="true">#</a>Troubleshooting and FAQ</h2>
 <p><strong>I don&#39;t see mod buttons.</strong> You need to be a moderator (or the broadcaster) in <em>that</em> channel. Also check the chat&#39;s <strong>🔨</strong> toggle isn&#39;t switched off, and Settings → Moderation → Quick buttons.</p>
+<p><strong>Staff history only shows my own entries.</strong> Team history comes from other moderators using Chattler 1.9 or later. If nobody else on the team uses it yet, you&#39;ll only see what your own Chattler recorded.</p>
 <p><strong>Staff history, &quot;who timed them out&quot; or AutoMod isn&#39;t working.</strong> These need extra Twitch permissions that older logins don&#39;t have. Log out (Settings → Account) and use <strong>Log in with Twitch</strong> again, approving the permissions.</p>
 <p><strong>I only see &quot;Redeemed a channel points reward&quot;, not the reward name.</strong> Twitch only shares reward names with the broadcaster, so full details appear in your own channel only.</p>
 <p><strong>Chat stopped moving.</strong> Your mouse is probably over it (pause while hovering) - look for the <strong>&quot;Paused while hovering&quot;</strong> pill, or move the mouse away. Scrolled up? Click <strong>More messages below</strong>.</p>
@@ -823,7 +832,7 @@
 <p><strong>Windows says &quot;Windows protected your PC&quot; when installing.</strong> Expected, because the installer isn&#39;t code-signed: <strong>More info → Run anyway</strong>.</p>
 <p><strong>How do I remove Chattler?</strong> Windows Settings → Apps → <strong>Chattler</strong> → Uninstall.</p>
 
-    <p class="guide-foot">Written for Chattler 1.8.0. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
+    <p class="guide-foot">Written for Chattler 1.9.0. <a href="guide.md" download="Chattler-Guide.md">Download this guide as Markdown</a>.</p>
   </article>
 </div>
 

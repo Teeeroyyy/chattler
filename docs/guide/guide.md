@@ -311,7 +311,13 @@ In channels you moderate, user cards have a **Staff history** tab that records *
 - A summary at the top shows where they stand now (for example **"Timed out until 20:42 - by Nightbot"** or **"Banned"**) and totals (*2 timeouts · 1 deleted message · 1 warning*).
 - It updates live while the card is open; a green dot shows it's recording.
 
-Chattler listens to Twitch's moderation feed while it's running and saves every action on your PC, so history builds up over time. Twitch doesn't provide history from before you started using Chattler.
+Where the history comes from:
+- **Your PC:** Chattler listens to Twitch's moderation feed while it's running and saves every action, so history builds up over time. It's kept by Twitch account, so someone changing their name keeps their history, and up to 200 entries are kept per person.
+- **Your mod team:** every moderator using Chattler shares the actions they see, so the card shows the whole team's history for that person - including things that happened while you were offline. A line at the top says how many entries came from other moderators. Only moderators of that channel can see it.
+- **Unban requests:** every unban request the person has made in that channel, what they wrote, and whether a moderator approved or denied it (with the reply).
+- **Your own channel:** Twitch confirms whether they're banned or timed out right now, and a waiting unban request is shown at the top.
+
+Twitch doesn't let apps download a channel's full moderation history, so actions from before anyone on the team used Chattler can't be shown.
 
 ### Monitor user
 Tick **Monitor user** on someone's card and pick a colour. All their messages in **that channel** get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you're monitoring in **Settings → Monitored users**.
@@ -432,6 +438,7 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 
 **What's shared**
 - Your Twitch login stays encrypted on your PC. Chattler only records your **Twitch username**, the **app version** and **when you last used it**, for usage statistics. Your chats and messages are never shared. Chattler's owner can use this to restrict an account from using Chattler.
+- **If you're a moderator:** the moderation actions you see in channels you moderate (bans, timeouts, deleted messages, warnings, VIP and mod changes) are shared with that channel's other moderators for their Staff history. Only confirmed moderators of that channel can see them.
 - Chattler talks to Twitch (chat, login, moderation), 7TV, BetterTTV, FrankerFaceZ and ivr.fi (emotes, badges, profiles, live status), recent-messages.robotty.de (chat history - can be turned off in Settings), and GitHub (updates). Links you click open in your normal browser.
 
 ---
@@ -439,6 +446,8 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 ## Troubleshooting and FAQ
 
 **I don't see mod buttons.** You need to be a moderator (or the broadcaster) in *that* channel. Also check the chat's **🔨** toggle isn't switched off, and Settings → Moderation → Quick buttons.
+
+**Staff history only shows my own entries.** Team history comes from other moderators using Chattler 1.9 or later. If nobody else on the team uses it yet, you'll only see what your own Chattler recorded.
 
 **Staff history, "who timed them out" or AutoMod isn't working.** These need extra Twitch permissions that older logins don't have. Log out (Settings → Account) and use **Log in with Twitch** again, approving the permissions.
 
