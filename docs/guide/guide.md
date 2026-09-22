@@ -333,7 +333,10 @@ Click **Mod actions** in the toolbar to open a window listing **every moderator 
 - Click the **pin** in its header to keep it on top of everything.
 - Pick a channel from the drop-down to show only that channel.
 - Click a name to open that person's user card, popped out next to the window.
-- It opens with recent history from your PC, then fills in live. It works for channels you moderate that are open in Chattler (with Staff history permissions).
+- It also lists **shoutouts**, **AutoMod approvals and denials** (“Ottertail approved a held message from grumbleweed”) and **suspicious-user changes**.
+- It opens with recent history from your PC **and from your mod team** - actions other moderators’ Chattler recorded while yours was closed (last 7 days) - then fills in live.
+- If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.
+- It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
 
 ### Monitor user
 Tick **Monitor user** on someone's card and pick a colour. All their messages in **that channel** get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you're monitoring in **Settings → Monitored users**.
