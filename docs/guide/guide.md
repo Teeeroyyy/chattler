@@ -402,6 +402,9 @@ Everything else works as normal, and the setting is remembered. You can also swi
 ### Pin (📌 in the toolbar)
 Locks the window **in place** (it can't be moved, resized, maximised or snapped) and keeps it **on top of all other windows** - including games in borderless fullscreen. Click again to unpin. *(Exclusive-fullscreen games can still cover it; Windows doesn't allow any app on top of those.)*
 
+### Window size
+Drag the **top or bottom edge** to the edge of the screen and the window fills the screen from top to bottom, keeping its width. **Double-click** either edge to do the same. Drag the title bar to the top of the screen to maximise, or to a side to snap to half the screen.
+
 ### Tab position
 Settings → Appearance → **Tab position: Top / Left**. **Left** puts tabs in a sidebar with full names and a **+ New tab** button; drag tabs up and down to reorder.
 
