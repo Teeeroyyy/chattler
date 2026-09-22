@@ -71,7 +71,8 @@ You only log in once; Chattler renews your login in the background. To switch ac
 
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
-│ ≡  [Tab A] [Tab B • ] +          ● you   📌  ⚙          - ▢ ✕            │  ← title bar
+│ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
+│ 📌 Pin   🛡 Mod actions                    ◔ 1,240 msgs/min · Channel   ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
 │ (◉) Channel  LIVE 1,514 watching  │ (◉) Other channel   Offline           │  ← split headers
 │ Live for 2h · Game · Title…  🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
@@ -88,7 +89,12 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **Restart to update** - appears when a new version has downloaded.
 - **Connection dot** - green when connected (hover for details).
 - **Your account** - your Twitch avatar and name.
+
+**Toolbar, the row below the tabs**
+
 - **📌 Pin** - lock the window in place and keep it on top.
+- **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
+- **Chat meter** - roughly how many messages a minute the chat you're in is getting, and which chat that is. It turns amber when a chat is busy (300+ a minute) and red when it's flooding (1,500+).
 - **⚙ Settings**.
 
 **Tabs** show a **green dot** if someone in the tab is live, the tab name, a **purple dot** for unread messages (red if you were highlighted), and **×** to close.
@@ -243,7 +249,7 @@ Click any **username** (or an `@mention`) to open their card.
 - **Drag a card past the edge of Chattler's window** and let go, or click its **pop-out** button (the square with an arrow, next to the pin). The card becomes its own small window you can put **anywhere on your screen** - beside Chattler, over a game, or on another monitor.
 - Move it by dragging its header, and resize it from its edges.
 - It's the same live card: new messages, moderation buttons, Staff history and Monitor user all keep working. It's always pinned.
-- It stays above Chattler, and above games too when the main window is pinned (📌).
+- It stays above Chattler, and above games too when the main window is pinned (📌 in the toolbar).
 - Close it with its **×**. Popped-out cards close when Chattler closes.
 
 **Pinning a card** (the pin in the card's top-right corner)
@@ -319,6 +325,15 @@ Where the history comes from:
 
 Twitch doesn't let apps download a channel's full moderation history, so actions from before anyone on the team used Chattler can't be shown.
 
+### Mod actions window
+Click **Mod actions** in the toolbar to open a window listing **every moderator action** in the channels you moderate, newest first, as they happen: timeouts and bans (with duration and reason), deleted messages (with the text), warnings, unbans, VIP and mod changes, chat mode changes, blocked terms and raids.
+
+- It's its own window: put it anywhere on your screen or on another monitor, and resize it from its edges.
+- Click the **pin** in its header to keep it on top of everything.
+- Pick a channel from the drop-down to show only that channel.
+- Click a name to open that person's user card, popped out next to the window.
+- It opens with recent history from your PC, then fills in live. It works for channels you moderate that are open in Chattler (with Staff history permissions).
+
 ### Monitor user
 Tick **Monitor user** on someone's card and pick a colour. All their messages in **that channel** get a tint and a coloured bar, so you can spot them instantly in a busy chat - including lines already on screen. Manage everyone you're monitoring in **Settings → Monitored users**.
 
@@ -348,7 +363,7 @@ Settings → Appearance → **Background transparency** (30-100%). Only the **ba
 - Going below 100% switches the window to see-through mode; Chattler rebuilds the window in place when you let go of the slider (your tabs are kept).
 - In see-through mode, resize the window from its edges and corners.
 
-### Pin (📌 in the title bar)
+### Pin (📌 in the toolbar)
 Locks the window **in place** (it can't be moved, resized, maximised or snapped) and keeps it **on top of all other windows** - including games in borderless fullscreen. Click again to unpin. *(Exclusive-fullscreen games can still cover it; Windows doesn't allow any app on top of those.)*
 
 ### Tab position
@@ -459,7 +474,7 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 
 **"Can't check access".** Chattler couldn't reach Twitch. Check your internet connection; it retries automatically every 30 seconds.
 
-**The window won't move or resize.** It's pinned - click **📌** in the title bar.
+**The window won't move or resize.** It's pinned - click **📌 Pin** in the toolbar.
 
 **Windows says "Windows protected your PC" when installing.** Expected, because the installer isn't code-signed: **More info → Run anyway**.
 
