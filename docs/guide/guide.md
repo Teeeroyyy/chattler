@@ -419,6 +419,79 @@ Settings → Appearance → **Tab position: Top / Left**. **Left** puts tabs in 
 
 ---
 
+## Themes and plugins
+
+Chattler comes with **eight themes** and **eight plugins**, and every one of them is a plain text file you can open, change or replace. So is anything the community writes.
+
+### Themes
+
+Settings -> Appearance -> **Theme** shows the gallery, lightest first:
+
+| Theme | | Theme | |
+| --- | --- | --- | --- |
+| **Daylight** | brightest, white panels | **Dusk** | soft blue-grey, easy in a lit room |
+| **Paper** | warm, low glare | **Dark** | Chattler's default |
+| **Mist** | cool, teal accent | **Carbon** | near-black, mint accent |
+| **Slate** | dimmed light theme | **Midnight** | pure black, for OLED screens |
+
+**Open themes folder** takes you to `%APPDATA%\Chatter\themes`. Drop a `.theme` file there, click **Reload**, and it joins the gallery. A theme is a name, whether it is light or dark, and a handful of colours:
+
+```
+theme "Seafoam"
+base dark
+
+bg      #0d1a19
+surface #12211f
+text    #dcecea
+accent  #4fd6c0
+```
+
+Name your file after a built-in one (`dark.theme`) and yours is used instead. Delete it and the original comes back.
+
+### Plugins
+
+A plugin watches chat and tells you when something is worth your attention. Settings -> **Plugins** lists them with a switch each, their own settings, and the last few alerts they raised.
+
+| Plugin | Alerts when | On by default |
+| --- | --- | --- |
+| **Repeat offender** | the same person keeps getting timed out or banned | Yes |
+| **AutoMod waiting** | a held message has sat unanswered too long | Yes |
+| **Suspicious user watch** | someone Twitch has flagged talks in your chat | Yes |
+| **Mod storm** | your team suddenly does a lot at once | No |
+| **Chat flood** | a chat speeds up past a threshold | No |
+| **Copypasta watch** | the same line is posted over and over | No |
+| **First-timer links** | somebody's first ever message has a link in it | No |
+| **Raid watch** | a raid lands, with how many came | No |
+
+Alerts appear in the corner with the plugin's name, amber for *have a look* and red for *now*. A plugin can also play a chime or send a desktop notification, and **streamer mode silences both**.
+
+### What plugins can and cannot do
+
+Plugins are written in **Chattscript**, a small language made for this. A plugin can raise alerts, play chimes, send notifications and count things.
+
+A plugin **cannot** time anyone out, ban, delete messages, send anything as you, read your Twitch login, reach the internet, or touch your files. The language has no way to express any of it. Every run is also capped in time, so a badly written plugin cannot slow your chat down.
+
+Still read a plugin before you switch it on. They are short on purpose. A plugin cannot hurt you, but it can be wrong, noisy, or put someone's message on your screen while you are streaming.
+
+### Writing your own
+
+Full documentation, including every event and function, is at **[docs.chattler.net](https://docs.chattler.net/)**. The short version:
+
+```
+plugin "Shouty people"
+description "Says something when chat goes all caps"
+
+on message do
+  if event.text = upper(event.text) and length(event.text) > 20 then
+    alert(event.user + " is SHOUTING in " + event.channel)
+  end
+end
+```
+
+Save it as `shouty.chatt` in `%APPDATA%\Chatter\plugins`, click **Reload** in Settings, and switch it on.
+
+---
+
 ## Settings reference
 
 Open with **⚙** or **Ctrl+,**. Changes apply immediately.
@@ -438,6 +511,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | AutoMod: Highlight held messages · AutoMod chime (with Test) | both On |
 | | Highlight suspicious users | On |
 | | Streamer mode | Off |
+| **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
 | **Chat** | Show deleted messages (greyed and struck through, or hidden) | On |
 | | Load recent messages on join | On |

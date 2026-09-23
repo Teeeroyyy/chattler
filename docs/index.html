@@ -42,7 +42,7 @@
   "description": "A fast, free Twitch chat client for Windows with tabs and splits, 7TV, BetterTTV and FrankerFaceZ emotes, and one-click moderation tools including AutoMod, staff history and user cards.",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Windows 10, Windows 11",
-  "softwareVersion": "1.13.3",
+  "softwareVersion": "1.14.0",
   "releaseNotes": "https://chattler.net/#releases",
   "downloadUrl": "https://chattler.net/#download",
   "installUrl": "https://chattler.net/#download",
@@ -77,6 +77,14 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I write my own themes and plugins?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Both are plain text files you drop in a folder - the eight themes and eight plugins Chattler ships with are exactly the same kind of file. Plugins are written in Chattscript, a small language made for this, and they can raise alerts, play chimes and count things. They cannot moderate, post messages, read your Twitch login, reach the internet or touch your files. The docs cover all of it."
+      }
+    },
     {
       "@type": "Question",
       "name": "Is Chattler free?",
@@ -142,7 +150,9 @@
     <a href="#about">About</a>
     <a href="#features">Features</a>
     <a href="screenshots/">Screenshots</a>
-    <a href="guide/">Guide</a>
+    <a href="#make-it-yours">Themes</a>
+    <a href="https://docs.chattler.net/guide">Guide</a>
+    <a href="https://docs.chattler.net/">Plugins</a>
     <a href="#releases">Release notes</a>
     <a class="nav-cta" href="#download">Download</a>
   </nav>
@@ -185,7 +195,7 @@
     <div class="stats">
       <div><b>3</b><span>emote providers - 7TV, BTTV, FFZ</span></div>
       <div><b>1 click</b><span>timeouts, bans and undo</span></div>
-      <div><b>Auto</b><span>updates from every release</span></div>
+      <div><b>8+8</b><span>themes and plugins, all editable</span></div>
       <div><b>0</b><span>cost, and no ads</span></div>
     </div>
   </section>
@@ -259,6 +269,91 @@
     </div>
   </section>
 
+
+  <section id="make-it-yours" class="make">
+    <div class="section-head">
+      <p class="kicker">Themes and plugins</p>
+      <h2>Make it yours.</h2>
+      <p class="make-lede">Chattler ships with eight themes and eight moderation plugins - and every one of them is a plain text file you can open, change or rewrite. Same for anything the community builds.</p>
+    </div>
+
+    <div class="make-block">
+      <h3>Eight themes, light to dark</h3>
+      <p>Pick one in Settings. Or write your own: a theme is a name, whether it's light or dark, and a handful of colours. Everything else is worked out for you.</p>
+      <div class="swatches">
+        <figure class="swatch" style="--s-bg:#eceef3;--s-surface:#ffffff;--s-line:#e1e4ea;--s-text:#5b6170;--s-accent:#6a55f0">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Daylight<span>light</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#f1ece1;--s-surface:#fffcf5;--s-line:#e3dccd;--s-text:#6a6154;--s-accent:#a0522d">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Paper<span>light</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#e7edf2;--s-surface:#f8fbfd;--s-line:#d8e1e9;--s-text:#56636f;--s-accent:#0f7f9e">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Mist<span>light</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#d6dbe3;--s-surface:#e8ecf2;--s-line:#c6cdd8;--s-text:#4d5665;--s-accent:#4657cf">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Slate<span>light</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#222634;--s-surface:#2a2f3e;--s-line:#343a4a;--s-text:#a8afc2;--s-accent:#8ea2ff">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Dusk<span>dark</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#111318;--s-surface:#171a21;--s-line:#262a33;--s-text:#9aa0ae;--s-accent:#9b8cff">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Dark<span>dark</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#0b0c0f;--s-surface:#111317;--s-line:#1b1e24;--s-text:#939aa6;--s-accent:#57e0b0">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Carbon<span>dark</span></figcaption>
+        </figure>
+        <figure class="swatch" style="--s-bg:#000000;--s-surface:#07080a;--s-line:#16181e;--s-text:#9aa0ae;--s-accent:#9b8cff">
+          <span class="sw-window" aria-hidden="true"><span class="sw-bar"></span><span class="sw-line"></span><span class="sw-line short"></span></span>
+          <figcaption>Midnight<span>dark</span></figcaption>
+        </figure>
+      </div>
+      <pre class="code"><code><span class="c-kw">theme</span> <span class="c-str">"Seafoam"</span>
+<span class="c-kw">base</span> dark
+
+bg      <span class="c-col">#0d1a19</span>
+surface <span class="c-col">#12211f</span>
+text    <span class="c-col">#dcecea</span>
+accent  <span class="c-col">#4fd6c0</span></code></pre>
+      <p class="make-note">Drop it in your themes folder, hit Reload, and it's in the gallery.</p>
+    </div>
+
+    <div class="make-block">
+      <h3>Plugins that watch your chat for you</h3>
+      <p>A plugin says what to look for and what to do about it. They raise alerts - they can't moderate, post, or see your login. <a href="https://docs.chattler.net/limits">Here's exactly what they can and can't do</a>.</p>
+      <pre class="code"><code><span class="c-kw">plugin</span> <span class="c-str">"Repeat offender"</span>
+
+<span class="c-kw">on</span> timeout <span class="c-kw">do</span>
+  bump(event.user)
+  <span class="c-kw">if</span> count(event.user, <span class="c-num">15 minutes</span>) >= <span class="c-num">3</span> <span class="c-kw">then</span>
+    alert(event.user + <span class="c-str">" keeps getting timed out"</span>, <span class="c-str">"warn"</span>)
+  <span class="c-kw">end</span>
+<span class="c-kw">end</span></code></pre>
+      <div class="plug-grid">
+        <div class="plug"><b>Repeat offender</b><span>The same person actioned again and again</span></div>
+        <div class="plug"><b>AutoMod waiting</b><span>A held message nobody has answered</span></div>
+        <div class="plug"><b>Suspicious user watch</b><span>Twitch-flagged people talking in your chat</span></div>
+        <div class="plug"><b>Mod storm</b><span>Your team suddenly very busy</span></div>
+        <div class="plug"><b>Chat flood</b><span>A chat speeding up fast</span></div>
+        <div class="plug"><b>Copypasta watch</b><span>The same line from everyone</span></div>
+        <div class="plug"><b>First-timer links</b><span>A link in somebody's first message</span></div>
+        <div class="plug"><b>Raid watch</b><span>Who is raiding, and how many came</span></div>
+      </div>
+      <p class="make-note">Three are on out of the box. Each one has its own settings, and its own switch.</p>
+    </div>
+
+    <div class="make-cta">
+      <a class="btn primary" href="https://docs.chattler.net/">Read the docs</a>
+      <a class="btn ghost" href="https://docs.chattler.net/examples">See the examples</a>
+    </div>
+  </section>
+
   <section id="download" class="download">
     <div class="dl-card">
       <img src="assets/icon.png" alt="" width="72" height="72">
@@ -274,7 +369,7 @@
       <ol class="steps">
         <li><b>Run the installer.</b> If Windows says it protected your PC, click <i>More info</i> → <i>Run anyway</i> (the installer isn't code-signed).</li>
         <li><b>Open Chattler</b> from your Start Menu and click <i>Log in with Twitch</i>.</li>
-        <li><b>You're in.</b> Your chats, tabs and settings are saved, and Chattler keeps itself up to date. New to Chattler? Read the <a href="guide/">user guide</a>.</li>
+        <li><b>You're in.</b> Your chats, tabs and settings are saved, and Chattler keeps itself up to date. New to Chattler? Read the <a href="https://docs.chattler.net/guide">user guide</a>.</li>
       </ol>
     </div>
   </section>
@@ -285,6 +380,10 @@
       <h2>Good to know</h2>
     </div>
     <div class="faq-list">
+      <details>
+        <summary>Can I write my own themes and plugins?</summary>
+        <p>Yes. Both are plain text files you drop in a folder - the eight themes and eight plugins Chattler ships with are exactly the same kind of file. Plugins are written in Chattscript, a small language made for this, and they can raise alerts, play chimes and count things. They cannot moderate, post messages, read your Twitch login, reach the internet or touch your files. <a href="https://docs.chattler.net/">The docs</a> cover all of it.</p>
+      </details>
       <details open>
         <summary>Is Chattler free?</summary>
         <p>Yes. Chattler is free to download and use, with no ads and no paid tiers.</p>
@@ -307,7 +406,7 @@
       </details>
       <details>
         <summary>What does Chattler share?</summary>
-        <p>Your Twitch login stays encrypted on your PC. Chattler only records your Twitch username, the app version and when you last used it, for usage statistics. Your messages are never shared. If you moderate a channel, the moderation actions you see (bans, timeouts, warnings and so on) are shared with that channel's other moderators for their Staff history. See <a href="guide/#privacy">Privacy</a> in the user guide.</p>
+        <p>Your Twitch login stays encrypted on your PC. Chattler only records your Twitch username, the app version and when you last used it, for usage statistics. Your messages are never shared. If you moderate a channel, the moderation actions you see (bans, timeouts, warnings and so on) are shared with that channel's other moderators for their Staff history. See <a href="https://docs.chattler.net/guide#privacy">Privacy</a> in the user guide.</p>
       </details>
     </div>
   </section>
@@ -327,7 +426,7 @@
 
 <footer class="foot">
   <span><img src="assets/icon.png" alt="" width="18" height="18"> Chattler</span>
-  <span><a href="screenshots/">Screenshots</a> · <a href="guide/">User guide</a> · Not affiliated with Twitch.</span>
+  <span><a href="screenshots/">Screenshots</a> · <a href="https://docs.chattler.net/guide">User guide</a> · Not affiliated with Twitch.</span>
 </footer>
 
 <script src="site.js"></script>

@@ -210,3 +210,42 @@ h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; max-width: 720px; }
 .faq details[open] summary::after { transform: rotate(45deg); }
 .faq details p { margin: 0 0 20px; color: var(--text-2); font-size: 15.5px; }
 .faq details i { font-style: normal; color: var(--text); }
+
+/* ---------- Themes and plugins ---------- */
+.make { padding-bottom: 96px !important; }
+.make-lede { max-width: 62ch; color: var(--text-2); margin: 10px 0 0; }
+.make-block { margin-top: 40px; }
+.make-block h3 { font-size: 20px; margin: 0 0 6px; }
+.make-block > p { color: var(--text-2); max-width: 70ch; margin: 0 0 18px; }
+.make-note { color: var(--text-3); font-size: 14px; margin-top: 14px; }
+.swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(128px, 1fr)); gap: 12px; margin-bottom: 20px; }
+.swatch { margin: 0; }
+.sw-window {
+  display: block; height: 76px; border-radius: 10px; position: relative; overflow: hidden;
+  background: var(--s-bg); border: 1px solid var(--s-line);
+}
+.sw-bar { position: absolute; inset: 0 0 auto 0; height: 16px; background: var(--s-surface); display: block; }
+.sw-line { position: absolute; left: 10px; right: 10px; top: 30px; height: 5px; border-radius: 3px; background: var(--s-text); opacity: .7; display: block; }
+.sw-line.short { top: 46px; right: 45%; background: var(--s-accent); opacity: 1; }
+.swatch figcaption { display: flex; align-items: baseline; gap: 6px; margin-top: 8px; font-weight: 600; font-size: 14px; }
+.swatch figcaption span { color: var(--text-3); font-weight: 400; font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+pre.code {
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px;
+  padding: 16px 18px; overflow-x: auto; margin: 0; font-size: 13.5px; line-height: 1.6;
+}
+pre.code code { font-family: var(--mono, ui-monospace, "Cascadia Code", Consolas, monospace); color: var(--text); }
+.c-kw { color: #c084fc; font-weight: 600; }
+.c-str { color: #6ee7a8; }
+.c-num { color: #7dd3fc; }
+.c-col { color: #fbbf24; }
+.plug-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 10px; margin-top: 18px; }
+.plug {
+  border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--surface-2);
+  display: flex; flex-direction: column; gap: 3px;
+}
+.plug span { color: var(--text-2); font-size: 13.5px; }
+.make-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+@media (max-width: 720px) {
+  .swatches { grid-template-columns: repeat(auto-fit, minmax(104px, 1fr)); }
+  pre.code { font-size: 12.5px; }
+}
