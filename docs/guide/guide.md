@@ -75,8 +75,8 @@ You only log in once; Chattler renews your login in the background. To switch ac
 │ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
 │ 📌 Pin  🛡 Mod actions  ★ Subs  🎥 Streamer                           ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
-│ (◉) Channel  LIVE 1,514 watching  │ (◉) Other channel   Offline           │  ← split headers
-│ Live for 2h · Game · Title…  🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
+│ (◉) Channel LIVE 1,514 watching · 2h 14m │ (◉) Other channel  Offline     │  ← split headers
+│ Game · Title…               🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
 │ Followers only · 10m              │                                       │  ← chat modes
 │ 🗑 10m 🔨 20:53 name: message      │ 20:53 name: message                   │  ← chat
 │ …                                 │ …                                     │
@@ -282,7 +282,7 @@ Each line starts with a small, fixed column of buttons, so they never move under
 | **10m** | Time the person out for 10 minutes |
 | 🔨 | Ban the person |
 
-Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, Purge (1s), 1m, 10m, 1h, 1d, 1w, Ban.
+Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, Purge (1s), 1m, 5m, 10m, 1h, 1d, 1w, Ban.
 
 **Undo**: after a timeout or ban, a notification with **Undo** appears for a few seconds, and the "was timed out" line in chat also gets an **Undo** button.
 
@@ -291,8 +291,29 @@ Choose which buttons appear in **Settings → Moderation → Quick buttons**: De
 ### Who timed them out
 Timeout and ban lines say **which moderator did it, and why** - for example *"spambot3000 was timed out for 10m by **Ottertail**. Reason: link spam"*. This comes from Twitch's moderation feed (the same one that powers Staff history), so it works in channels you moderate.
 
+Chat also says when one is **lifted**: *"grumbleweed's timeout was removed by **Ottertail**"*, or *"sneaky was unbanned by **Ottertail**"*. Twitch sends nothing to chat when this happens, so these lines come from the same feed, and the **Undo** button on the original line disappears once there is nothing left to undo.
+
 ### Pause while hovering
-With **Pause chat while hovering** on (the default), chat stops moving while your mouse is over it, so the line you're aiming at stays put. A small pill shows **"Paused while hovering · N new"**; move the mouse away and everything catches up.
+With **Pause chat while hovering** on (the default), chat stops moving while your mouse is over it, so the line you're aiming at stays put. A small pill shows how many messages are waiting.
+
+**Settings -> Moderation -> Pause for** decides how long it holds:
+
+| Setting | What happens |
+| --- | --- |
+| **While hovering** | Chat stays still the whole time your pointer is over it, and catches up when you move away. |
+| **2 seconds** | Chat holds for two seconds, then catches up and keeps scrolling, even with your pointer still there. |
+| **5 seconds** | The same, with five seconds to work with. |
+
+With a time set, move the pointer away and back to pause again. The timer runs from when your pointer arrives, not from when it last moved, so a chat you are resting the mouse on never stays frozen.
+
+### Making a fast chat easier to read
+Three settings under **Settings → Appearance**, all off or normal until you turn them on:
+
+- **Message spacing: Compact / Normal / Roomy.** Roomy gives each line more room, which makes it easier to follow one line as it moves.
+- **Row stripes.** A faint background on every other line, so one message can be told from the next at a glance.
+- **Smooth scrolling.** New messages glide into place instead of jumping. Above **120 messages a minute** Chattler goes back to jumping by itself, because at that pace gliding means the text never stands still.
+
+Also worth trying: a larger **chat text size**, and [Pause while hovering](#pause-while-hovering) set to 2 or 5 seconds.
 
 ### Chat modes (🛡 in the chat header)
 Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow mode** (3s-2m) and **Followers only** (any follower up to 1 month). It always shows the channel's real current setting. **Clear chat for everyone** needs a second click to confirm.
@@ -316,7 +337,7 @@ Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow m
 Invalid values show the correct usage instead of guessing.
 
 ### The Moderate panel (user card)
-Purge, 1m, 10m, 1h, 1d, 1w and 2w timeouts; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings).
+Purge, 1m, 5m, 10m, 1h, 1d and 1w timeouts; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings).
 
 ### Staff history
 In channels you moderate, user cards have a **Staff history** tab that records **who did what, and when**:
@@ -510,6 +531,9 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Ding sound (with Test) · Highlighted in chat · Flash taskbar · Desktop notification | all On |
 | | AutoMod: Highlight held messages · AutoMod chime (with Test) | both On |
 | | Highlight suspicious users | On |
+| | Message spacing | Normal |
+| | Row stripes | Off |
+| | Smooth scrolling | Off |
 | | Streamer mode | Off |
 | **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
@@ -517,6 +541,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Load recent messages on join | On |
 | **Third-party emotes** | 7TV · BetterTTV · FrankerFaceZ | all On |
 | **Moderation** | Pause chat while hovering | On |
+| | Pause for | While hovering |
 | | Quick buttons on each message | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
 
