@@ -535,6 +535,7 @@ The **Whispers** button in the toolbar opens a panel beside your chats holding t
 
 - One conversation per person, newest at the bottom.
 - **Whisper** on any user card opens that person’s conversation here, ready to type, whether or not you have whispered before.
+- **×** on a conversation closes it, clearing it from the panel. Twitch keeps whispers on its side, so it comes back if that person whispers you again. It is tidying up, not blocking anyone.
 - **Reply** in the box at the bottom. Enter sends, Shift+Enter starts a new line.
 - **Pop out** with the arrow in the panel's header to move it into its own window, and close that window to put it back. It is the same panel either way, so a conversation never loses its place.
 - **Settings -> Moderation -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
