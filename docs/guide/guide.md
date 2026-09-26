@@ -98,6 +98,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
 - **★ Subs** - opens the [Subs window](#subs-window).
 - **🔔 Highlights** - opens the [Highlights window](#highlights-window).
+- **💬 Whispers** - opens the [Whispers panel](#whispers), with a count of anything unread.
 - **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
 - **⚙ Settings**.
 
@@ -528,6 +529,26 @@ Highlights keep showing in chat as normal; this is a second place to catch the o
 
 Set which words count in **Settings -> Highlights**; your own name is always included.
 
+## Whispers
+
+The **Whispers** button in the toolbar opens a panel beside your chats holding the private messages people send you, and your replies. The button carries a count of anything unread.
+
+- One conversation per person, newest at the bottom.
+- **Reply** in the box at the bottom. Enter sends, Shift+Enter starts a new line.
+- **Pop out** with the arrow in the panel's header to move it into its own window, and close that window to put it back. It is the same panel either way, so a conversation never loses its place.
+- **Settings -> Moderation -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
+
+Whispers need permissions Chattler did not ask for before, so **log out and log in again** once to turn them on.
+
+### What Twitch allows
+
+Twitch is strict about whispers, and the limits are theirs, not Chattler's:
+
+- **Sending needs a verified phone number** on your Twitch account (Settings -> Security and Privacy). Without one, Twitch refuses every whisper, and Chattler will tell you so.
+- **You may whisper at most 40 different people a day**, with smaller per-second and per-minute limits on top.
+- **Twitch may quietly drop a whisper** it does not like, while still reporting success. That is why Chattler says *Sent*, never *Delivered*.
+- A first message to somebody can be 500 characters; once they have whispered you, 10,000.
+
 ## Settings reference
 
 Open with **⚙** or **Ctrl+,**. Changes apply immediately.
@@ -549,6 +570,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Message spacing | Normal |
 | | Row stripes | Off |
 | | Collapse repeats | Off |
+| | Whispers in chat too | Off |
 | | Smooth scrolling | Off |
 | | Streamer mode | Off |
 | **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
