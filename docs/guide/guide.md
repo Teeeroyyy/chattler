@@ -73,7 +73,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 ```
 ┌───────────────────────────────────────────────────────────────────────────┐
 │ ≡  [Tab A] [Tab B • ] +                  ● you          - ▢ ✕            │  ← title bar
-│ 📌 Pin  🛡 Mod actions  ★ Subs  🎥 Streamer                           ⚙ │  ← toolbar
+│ 📌 Pin 🛡 Mod actions ★ Subs 🔔 Highlights 🎥 Streamer                ⚙ │  ← toolbar
 ├───────────────────────────────────┬───────────────────────────────────────┤
 │ (◉) Channel LIVE 1,514 watching · 2h 14m │ (◉) Other channel  Offline     │  ← split headers
 │ Game · Title…               🔨🛡🔍⊞✕│                          🔍 ⊞ ✕       │
@@ -97,6 +97,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **📌 Pin** - lock the window in place and keep it on top.
 - **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
 - **★ Subs** - opens the [Subs window](#subs-window).
+- **🔔 Highlights** - opens the [Highlights window](#highlights-window).
 - **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
 - **⚙ Settings**.
 
@@ -512,6 +513,19 @@ end
 Save it as `shouty.chatt` in `%APPDATA%\Chatter\plugins`, click **Reload** in Settings, and switch it on.
 
 ---
+
+## Highlights window
+
+The **🔔 Highlights** button opens a window listing every message that **mentioned you, replied to you, or matched one of your highlight words**, from every chat you have open. The word that caught it is marked, so you can see why it was picked up.
+
+- Newest at the bottom, with new arrivals flagged for 15 seconds.
+- **Channel filter** to narrow it to one chat.
+- **Text size slider** and **pin**, like the other tool windows.
+- Click a name to open that person's user card.
+
+Highlights keep showing in chat as normal; this is a second place to catch the ones that went past while you were reading something else. The window holds the last 500 for the session and does not write them to disk.
+
+Set which words count in **Settings -> Highlights**; your own name is always included.
 
 ## Settings reference
 
