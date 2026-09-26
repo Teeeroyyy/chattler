@@ -312,6 +312,7 @@ Three settings under **Settings → Appearance**, all off or normal until you tu
 
 - **Message spacing: Compact / Normal / Roomy.** Roomy gives each line more room, which makes it easier to follow one line as it moves.
 - **Row stripes.** A faint background on every other line, so one message can be told from the next at a glance.
+- **Collapse repeats.** The same line said over and over folds into one row with a count, like **W CUP ×12**. Click the count to open it back into the real messages. Mentions, replies, first messages, redemptions and flagged users are never folded, and a folded run opens by itself if one of the messages in it is deleted or its sender is timed out. It saves reading, not processing power: the speed is the same either way.
 - **Smooth scrolling.** New messages glide into place instead of jumping. Above **120 messages a minute** Chattler goes back to jumping by itself, because at that pace gliding means the text never stands still.
 
 Also worth trying: a larger **chat text size**, and [Pause while hovering](#pause-while-hovering) set to 2 or 5 seconds.
@@ -547,6 +548,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Highlight suspicious users | On |
 | | Message spacing | Normal |
 | | Row stripes | Off |
+| | Collapse repeats | Off |
 | | Smooth scrolling | Off |
 | | Streamer mode | Off |
 | **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
