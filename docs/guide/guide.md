@@ -537,6 +537,7 @@ The **Whispers** button in the toolbar opens a panel beside your chats holding t
 - **Reply** in the box at the bottom. Enter sends, Shift+Enter starts a new line.
 - **Pop out** with the arrow in the panel's header to move it into its own window, and close that window to put it back. It is the same panel either way, so a conversation never loses its place.
 - **Settings -> Moderation -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
+- A **whisper tone** plays when one arrives, lower than the highlight ding and the AutoMod chime so you can tell them apart. Turn it off in **Settings -> Highlights -> Whisper tone**, where there is a Test button. Streamer mode silences it with everything else.
 
 Whispers need permissions Chattler did not ask for before, so **log out and log in again** once to turn them on.
 
@@ -571,6 +572,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Row stripes | Off |
 | | Collapse repeats | Off |
 | | Whispers in chat too | Off |
+| **Highlights** | Whisper tone | On |
 | | Smooth scrolling | Off |
 | | Streamer mode | Off |
 | **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
