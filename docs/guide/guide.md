@@ -284,7 +284,7 @@ Each line starts with a small, fixed column of buttons, so they never move under
 | **10m** | Time the person out for 10 minutes |
 | 🔨 | Ban the person |
 
-Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, Purge (1s), 1m, 5m, 10m, 1h, 1d, 1w, Ban.
+Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, 1s, 1m, 5m, 10m, 30m, 1h, 1d, 1w, Ban. **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
 
 **Undo**: after a timeout or ban, a notification with **Undo** appears for a few seconds, and the "was timed out" line in chat also gets an **Undo** button.
 
@@ -340,7 +340,7 @@ Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow m
 Invalid values show the correct usage instead of guessing.
 
 ### The Moderate panel (user card)
-Purge, 1m, 5m, 10m, 1h, 1d and 1w timeouts; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings).
+1s, 1m, 5m, 10m, 30m, 1h, 1d and 1w timeouts, in two rows of four; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings). **1s** is the purge.
 
 ### Staff history
 In channels you moderate, user cards have a **Staff history** tab that records **who did what, and when**:
@@ -395,6 +395,7 @@ If you moderate a channel that uses AutoMod, **messages AutoMod holds for review
 - Click **Allow** to let the message into chat, or **Deny** to reject it. The card then says **"Allowed by name"** or **"Denied by name"** - including when another moderator handles it - or **"Expired"** if nobody acted in time.
 
 **Settings → Highlights → AutoMod (moderators)**
+- **Show held messages in chat** - off means AutoMod carries on working on Twitch and Chattler stops drawing the cards. Nothing else shows a message *while* it is held, so you would be relying on Twitch's own AutoMod queue, or on the **AutoMod waiting** plugin, to catch them.
 - **Highlight held messages** - held messages stand out until someone allows or denies them.
 - **AutoMod chime** - a sound when AutoMod holds a message. It's different from the highlight ding, so you can tell them apart. **Test** plays it.
 
@@ -578,7 +579,7 @@ Open with **⚙** or **Ctrl+,**. Changes apply immediately.
 | | Tab position (Top / Left) | Top |
 | **Highlights** | Highlight words | none |
 | | Ding sound (with Test) · Highlighted in chat · Flash taskbar · Desktop notification | all On |
-| | AutoMod: Highlight held messages · AutoMod chime (with Test) | both On |
+| | AutoMod: Show held messages in chat · Highlight held messages · Stack when busy · AutoMod chime (with Test) | all On |
 | | Highlight suspicious users | On |
 | | Message spacing | Normal |
 | | Row stripes | Off |
