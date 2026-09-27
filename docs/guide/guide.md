@@ -549,8 +549,10 @@ The **Whispers** button in the toolbar opens a panel beside your chats holding t
 - **×** on a conversation closes it, clearing it from the panel. Twitch keeps whispers on its side, so it comes back if that person whispers you again. It is tidying up, not blocking anyone.
 - **Reply** in the box at the bottom. Enter sends, Shift+Enter starts a new line.
 - **Pop out** with the arrow in the panel's header to move it into its own window, and close that window to put it back. It is the same panel either way, so a conversation never loses its place.
-- **Settings -> Moderation -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
+- **Settings -> Appearance -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
 - A **whisper tone** plays when one arrives, lower than the highlight ding and the AutoMod chime so you can tell them apart. Turn it off in **Settings -> Highlights -> Whisper tone**, next to the highlight ding, where there is a Test button. Streamer mode silences it with everything else.
+- While Chattler is not the window you are looking at, a whisper **flashes the taskbar** and raises a **desktop notification**, the same as a highlight does, and on the same two switches in **Settings -> Highlights**. Streamer mode skips the notification, which would put the message on stream.
+- Whispers reach you whatever you have open. They are not tied to any channel, so you do not need your own chat in a tab.
 
 Whispers need permissions Chattler did not ask for before, so **log out and log in again** once to turn them on.
 
