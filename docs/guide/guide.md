@@ -175,7 +175,7 @@ Settings → **Appearance**: theme (Dark, Midnight or Light), text size, compact
 
 ### Reading chat
 - **Recent history** (up to 150 messages) loads when you open a chat. Older lines are slightly dimmed.
-- **Replies** show a small "Replying to @name: …" line above.
+- **Replies** show a small "Replying to @name: …" line above. Clicking that name opens their user card.
 - **First-time chatters** get a green bar and a label.
 - **Sub, resub, gift and raid notices** and **announcements** appear as highlighted cards.
 - **Deleted messages and timed-out users** are greyed out and struck through (or hidden - see Settings).
