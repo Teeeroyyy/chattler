@@ -156,7 +156,7 @@ Click any **username** to open their **user card**: their profile and what they'
 Settings → **Highlights**: add words you care about (for example `giveaway` or your nickname). Matching messages get a coloured bar, a ding and - if Chattler isn't the focused window - a taskbar flash and a desktop notification.
 
 ### Step 8 - Make it yours
-Settings → **Appearance**: theme (Dark, Midnight or Light), text size, compact mode, timestamps, badges, background transparency and tab position. Everything applies instantly and is remembered.
+Settings → **Appearance**: theme (eight of them, Daylight through Midnight), text size, message spacing, timestamps, badges, background transparency and tab position. Everything applies instantly and is remembered.
 
 ---
 
@@ -394,7 +394,7 @@ If you moderate a channel that uses AutoMod, **messages AutoMod holds for review
 - **The words that caused it are underlined** in red.
 - Click **Allow** to let the message into chat, or **Deny** to reject it. The card then says **"Allowed by name"** or **"Denied by name"** - including when another moderator handles it - or **"Expired"** if nobody acted in time.
 
-**Settings → Highlights → AutoMod (moderators)**
+**Settings → AutoMod (moderators)**
 - **Show held messages in chat** - off means AutoMod carries on working on Twitch and Chattler stops drawing the cards. Nothing else shows a message *while* it is held, so you would be relying on Twitch's own AutoMod queue, or on the **AutoMod waiting** plugin, to catch them.
 - **Highlight held messages** - held messages stand out until someone allows or denies them.
 - **AutoMod chime** - a sound when AutoMod holds a message. It's different from the highlight ding, so you can tell them apart. **Test** plays it.
@@ -409,7 +409,7 @@ Everything stays on the line: who said it, what they said, why AutoMod held it, 
 
 Whether a card is stacked is decided when it appears and then left alone, so answering one does not make it grow and shove the chat around under your pointer.
 
-Turn it off in **Settings -> Highlights -> Stack held messages when busy**.
+Turn it off in **Settings -> AutoMod (moderators) -> Stack held messages when busy**.
 
 ## Suspicious users
 
@@ -419,7 +419,7 @@ Twitch quietly flags people who look like trouble: **likely ban evaders**, peopl
 - **Restricted people:** their messages never reach chat at all - nobody else sees them. Chattler shows them to moderators as a **red card** marked "only moderators see this", so you can decide what to do.
 - **Setting someone's status:** on those cards, **Monitor**, **Restrict** and **No restrictions** change how Twitch treats them, the same as Twitch's own mod tools.
 - **Changes are logged:** when anyone on the team changes a person's status, it appears in the [Mod actions window](#mod-actions-window), for example "Ottertail marked Watched as restricted".
-- **Turning the tint off:** Settings -> Highlights -> **Highlight suspicious users**. The tag stays either way.
+- **Turning the tint off:** Settings -> Moderation -> **Highlight suspicious users**. The tag stays either way.
 
 This needs Chattler's suspicious-users permissions. If you logged in before this feature existed, log out and use **Log in with Twitch** again.
 
@@ -438,7 +438,7 @@ Safe to show on stream. While it is on:
 - **Sounds are off**: no highlight ding and no AutoMod chime.
 - **Desktop notifications are off**, so nobody else’s message pops up on screen.
 
-Everything else works as normal, and the setting is remembered. You can also switch it from Settings -> Highlights -> **Streamer mode**.
+Everything else works as normal, and the setting is remembered. You can also switch it from Settings -> Appearance -> **Streamer mode**.
 
 ### Pin (📌 in the toolbar)
 Locks the window **in place** (it can't be moved, resized, maximised or snapped) and keeps it **on top of all other windows** - including games in borderless fullscreen. Click again to unpin. *(Exclusive-fullscreen games can still cover it; Windows doesn't allow any app on top of those.)*
@@ -550,7 +550,7 @@ The **Whispers** button in the toolbar opens a panel beside your chats holding t
 - **Reply** in the box at the bottom. Enter sends, Shift+Enter starts a new line.
 - **Pop out** with the arrow in the panel's header to move it into its own window, and close that window to put it back. It is the same panel either way, so a conversation never loses its place.
 - **Settings -> Moderation -> Whispers in chat too** also drops incoming whispers into the chat you are reading. They always appear in the panel regardless.
-- A **whisper tone** plays when one arrives, lower than the highlight ding and the AutoMod chime so you can tell them apart. Turn it off in **Settings -> Highlights -> Whisper tone**, where there is a Test button. Streamer mode silences it with everything else.
+- A **whisper tone** plays when one arrives, lower than the highlight ding and the AutoMod chime so you can tell them apart. Turn it off in **Settings -> Highlights -> Whisper tone**, next to the highlight ding, where there is a Test button. Streamer mode silences it with everything else.
 
 Whispers need permissions Chattler did not ask for before, so **log out and log in again** once to turn them on.
 
@@ -565,35 +565,35 @@ Twitch is strict about whispers, and the limits are theirs, not Chattler's:
 
 ## Settings reference
 
-Open with **⚙** or **Ctrl+,**. Changes apply immediately.
+Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (or its arrow) to open it, and again to close it. Changes apply immediately.
 
 | Section | Setting | Default |
 |---|---|---|
 | **Account** | Logged-in account, Log out | - |
-| **Appearance** | Theme (Dark / Midnight / Light) | Dark |
+| **Appearance** | Theme (eight, Daylight through Midnight) | Dark |
 | | Chat text size | 13.5px |
-| | Compact messages | Off |
+| | Message spacing (Compact / Normal / Roomy) | Normal |
+| | Row stripes | Off |
+| | Whispers in chat too | Off |
+| | Collapse repeats | Off |
+| | Smooth scrolling | Off |
 | | Show timestamps · 24-hour clock | On · On |
 | | Show badges | On |
 | | Background transparency | 100% |
 | | Tab position (Top / Left) | Top |
-| **Highlights** | Highlight words | none |
-| | Ding sound (with Test) · Highlighted in chat · Flash taskbar · Desktop notification | all On |
-| | AutoMod: Show held messages in chat · Highlight held messages · Stack when busy · AutoMod chime (with Test) | all On |
-| | Highlight suspicious users | On |
-| | Message spacing | Normal |
-| | Row stripes | Off |
-| | Collapse repeats | Off |
-| | Whispers in chat too | Off |
-| **Highlights** | Whisper tone | On |
-| | Smooth scrolling | Off |
 | | Streamer mode | Off |
+| **Highlights** | Highlight words | none |
+| | Ding sound (with Test) · Whisper tone (with Test) | On · On |
+| | Highlighted in chat · Flash taskbar · Desktop notification | all On |
+| **AutoMod (moderators)** | Show held messages in chat · Highlight held messages · Stack held messages when busy | all On |
+| | AutoMod chime (with Test) | On |
 | **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
 | **Chat** | Show deleted messages (greyed and struck through, or hidden) | On |
 | | Load recent messages on join | On |
 | **Third-party emotes** | 7TV · BetterTTV · FrankerFaceZ | all On |
-| **Moderation** | Pause chat while hovering | On |
+| **Moderation** | Highlight suspicious users | On |
+| | Pause chat while hovering | On |
 | | Pause for | While hovering |
 | | Quick buttons on each message | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
