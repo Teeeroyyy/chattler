@@ -400,6 +400,16 @@ If you moderate a channel that uses AutoMod, **messages AutoMod holds for review
 
 ---
 
+### Stacked held messages
+
+Above **120 messages a minute**, held messages take **one line each** and sit together as a single block, instead of a card each. A burst of them then costs you a few lines rather than half the chat.
+
+Everything stays on the line: who said it, what they said, why AutoMod held it, the level, and its own **Allow** and **Deny**. Nothing is folded away, because a held message needs a decision inside the time Twitch allows, and hiding one behind a "show more" could cost you that.
+
+Whether a card is stacked is decided when it appears and then left alone, so answering one does not make it grow and shove the chat around under your pointer.
+
+Turn it off in **Settings -> Highlights -> Stack held messages when busy**.
+
 ## Suspicious users
 
 Twitch quietly flags people who look like trouble: **likely ban evaders**, people **banned in channels that share bans**, and anyone a moderator has **marked by hand**. In channels you moderate, Chattler shows them.
