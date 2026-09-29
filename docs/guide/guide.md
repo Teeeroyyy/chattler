@@ -55,6 +55,7 @@ Chattler is a fast, modern Twitch chat client for Windows. Watch and take part i
 2. Run **Chattler-Setup.exe**.
 3. Windows may say **"Windows protected your PC"** because the installer isn't code-signed. Click **More info → Run anyway**.
 4. Chattler installs for your Windows account only (no admin needed) and opens. From then on, find **Chattler** in your Start Menu.
+5. A new install starts with **every switch in Settings off** - no sounds, no notifications, no third-party emotes, no plugins. Open **Settings** (the cog, or Ctrl+,) and turn on what you want. The [Settings reference](#settings-reference) lists the lot.
 
 ### Log in
 
@@ -153,7 +154,7 @@ Click the message box at the bottom of a chat, type, and press **Enter**. Try:
 Click any **username** to open their **user card**: their profile and what they've said this session. Click the **pin** to keep the card open, drag it by its header, and resize it from the bottom-right corner.
 
 ### Step 7 - Set up highlights
-Settings → **Highlights**: add words you care about (for example `giveaway` or your nickname). Matching messages get a coloured bar, a ding and - if Chattler isn't the focused window - a taskbar flash and a desktop notification.
+Settings → **Highlights**: add words you care about (for example `giveaway` or your nickname), then turn on how you want to hear about them - a coloured bar, a ding and, while Chattler isn't the window you are looking at, a taskbar flash and a desktop notification. They all start off.
 
 ### Step 8 - Make it yours
 Settings → **Appearance**: theme (eight of them, Daylight through Midnight), text size, message spacing, timestamps, badges, background transparency and tab position. Everything applies instantly and is remembered.
@@ -296,7 +297,7 @@ Timeout and ban lines say **which moderator did it, and why** - for example *"sp
 Chat also says when one is **lifted**: *"grumbleweed's timeout was removed by **Ottertail**"*, or *"sneaky was unbanned by **Ottertail**"*. Twitch sends nothing to chat when this happens, so these lines come from the same feed, and the **Undo** button on the original line disappears once there is nothing left to undo.
 
 ### Pause while hovering
-With **Pause chat while hovering** on (the default), chat stops moving while your mouse is over it, so the line you're aiming at stays put. A small pill shows how many messages are waiting.
+With **Pause chat while hovering** on, chat stops moving while your mouse is over it, so the line you're aiming at stays put. A small pill shows how many messages are waiting.
 
 **Settings -> Moderation -> Pause for** decides how long it holds:
 
@@ -487,16 +488,18 @@ Name your file after a built-in one (`dark.theme`) and yours is used instead. De
 
 A plugin watches chat and tells you when something is worth your attention. Settings -> **Plugins** lists them with a switch each, their own settings, and the last few alerts they raised.
 
-| Plugin | Alerts when | On by default |
-| --- | --- | --- |
-| **Repeat offender** | the same person keeps getting timed out or banned | Yes |
-| **AutoMod waiting** | a held message has sat unanswered too long | Yes |
-| **Suspicious user watch** | someone Twitch has flagged talks in your chat | Yes |
-| **Mod storm** | your team suddenly does a lot at once | No |
-| **Chat flood** | a chat speeds up past a threshold | No |
-| **Copypasta watch** | the same line is posted over and over | No |
-| **First-timer links** | somebody's first ever message has a link in it | No |
-| **Raid watch** | a raid lands, with how many came | No |
+Every plugin starts off. Turn on the ones you want.
+
+| Plugin | Alerts when |
+| --- | --- |
+| **Repeat offender** | the same person keeps getting timed out or banned |
+| **AutoMod waiting** | a held message has sat unanswered too long |
+| **Suspicious user watch** | someone Twitch has flagged talks in your chat |
+| **Mod storm** | your team suddenly does a lot at once |
+| **Chat flood** | a chat speeds up past a threshold |
+| **Copypasta watch** | the same line is posted over and over |
+| **First-timer links** | somebody's first ever message has a link in it |
+| **Raid watch** | a raid lands, with how many came |
 
 Alerts appear in the corner with the plugin's name, amber for *have a look* and red for *now*. A plugin can also play a chime or send a desktop notification, and **streamer mode silences both**.
 
@@ -569,6 +572,8 @@ Twitch is strict about whispers, and the limits are theirs, not Chattler's:
 
 Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (or its arrow) to open it, and again to close it. Changes apply immediately.
 
+**A new install starts with every switch off**, so nothing is decided for you: go through this list once and turn on what you want. Settings you have already chosen are never changed by an update. The choices that are not on/off - theme, text size, spacing, tab position, quick buttons - still start somewhere sensible, since "off" means nothing for those.
+
 | Section | Setting | Default |
 |---|---|---|
 | **Account** | Logged-in account, Log out | - |
@@ -579,23 +584,23 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | | Whispers in chat too | Off |
 | | Collapse repeats | Off |
 | | Smooth scrolling | Off |
-| | Show timestamps · 24-hour clock | On · On |
-| | Show badges | On |
+| | Show timestamps · 24-hour clock | Off · Off |
+| | Show badges | Off |
 | | Background transparency | 100% |
 | | Tab position (Top / Left) | Top |
 | | Streamer mode | Off |
 | **Highlights** | Highlight words | none |
-| | Ding sound (with Test) · Whisper tone (with Test) | On · On |
-| | Highlighted in chat · Flash taskbar · Desktop notification | all On |
-| **AutoMod (moderators)** | Show held messages in chat · Highlight held messages · Stack held messages when busy | all On |
-| | AutoMod chime (with Test) | On |
-| **Plugins** | Each plugin on or off, with its own settings | 3 of 8 on |
+| | Ding sound (with Test) · Whisper tone (with Test) | Off · Off |
+| | Highlighted in chat · Flash taskbar · Desktop notification | all Off |
+| **AutoMod (moderators)** | Show held messages in chat · Highlight held messages · Stack held messages when busy | all Off |
+| | AutoMod chime (with Test) | Off |
+| **Plugins** | Each plugin on or off, with its own settings | all off |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
-| **Chat** | Show deleted messages (greyed and struck through, or hidden) | On |
-| | Load recent messages on join | On |
-| **Third-party emotes** | 7TV · BetterTTV · FrankerFaceZ | all On |
-| **Moderation** | Highlight suspicious users | On |
-| | Pause chat while hovering | On |
+| **Chat** | Show deleted messages (greyed and struck through, or hidden) | Off |
+| | Load recent messages on join | Off |
+| **Third-party emotes** | 7TV · BetterTTV · FrankerFaceZ | all Off |
+| **Moderation** | Highlight suspicious users | Off |
+| | Pause chat while hovering | Off |
 | | Pause for | While hovering |
 | | Quick buttons on each message | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
