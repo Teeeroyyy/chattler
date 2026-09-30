@@ -250,7 +250,7 @@ Click any **username** (or an `@mention`) to open their card.
 - **Messages** - what they've said in this chat this session, with deleted ones struck through.
 - **Staff history** tab - *mods only*, see [Staff history](#staff-history).
 - **Moderate** panel - *mods only*.
-- **Whisper**, **Mention**, **Open their chat**, **View on Twitch**.
+- **Whisper**, **Mention**, **View on Twitch**.
 - **Twitch usercard** - opens Twitch's own card for that person in this channel, in your browser. It holds the history Twitch keeps: their messages and the bans and timeouts from before you were watching, which Chattler cannot see. Moderators get the moderation part of it; anyone can see the rest.
 
 **Moving and resizing**
