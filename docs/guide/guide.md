@@ -20,11 +20,12 @@ Chattler is a fast, modern Twitch chat client for Windows. Watch and take part i
 10. [Moderation](#moderation)
 11. [AutoMod](#automod)
 12. [Window options](#window-options)
-13. [Settings reference](#settings-reference)
-14. [Keyboard shortcuts and mouse tricks](#keyboard-shortcuts-and-mouse-tricks)
-15. [Updates](#updates)
-16. [Privacy](#privacy)
-17. [Troubleshooting and FAQ](#troubleshooting-and-faq)
+13. [Just for one channel](#just-for-one-channel)
+14. [Settings reference](#settings-reference)
+15. [Keyboard shortcuts and mouse tricks](#keyboard-shortcuts-and-mouse-tricks)
+16. [Updates](#updates)
+17. [Privacy](#privacy)
+18. [Troubleshooting and FAQ](#troubleshooting-and-faq)
 
 ---
 
@@ -117,6 +118,7 @@ On the right of the same line is the **version you're on**, like *Chattler 1.13.
 |---|---|
 | 🔨 | Show or hide the moderation buttons in this chat *(mods only)* |
 | 🛡 | Chat modes panel *(mods only)* |
+| ⚙ | [Settings for this channel](#just-for-one-channel) - its own highlight words and quick buttons. It turns the accent colour while that channel has any |
 | 🔍 | Search this chat (Ctrl+F) |
 | ⊞ | Add another split next to this one (Ctrl+K) |
 | ✕ | Close this split (Ctrl+W) |
@@ -228,6 +230,7 @@ Channel point redemptions appear in the chat.
 
 - **Highlight words**: type a word and press **Add** (or Enter). Each word appears as a chip; click **×** to remove it. Matching ignores capitals.
 - **Your username** is always highlighted when someone mentions you, and replies to you count too.
+- **Just for one channel**: the **⚙** on a chat's header adds words that only highlight there. They work alongside the ones here, not instead of them - see [Just for one channel](#just-for-one-channel).
 
 When a highlight arrives - each of these can be switched on or off:
 
@@ -287,6 +290,8 @@ Each line starts with a small, fixed column of buttons, so they never move under
 | 🔨 | Ban the person |
 
 Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, 1s, 1m, 5m, 10m, 30m, 1h, 1d, 1w, Ban. **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
+
+A single channel can have a different set: open **⚙** on its header and pick there. See [Just for one channel](#just-for-one-channel).
 
 **Undo**: after a timeout or ban, a notification with **Undo** appears for a few seconds, and the "was timed out" line in chat also gets an **Undo** button.
 
@@ -570,6 +575,24 @@ Twitch is strict about whispers, and the limits are theirs, not Chattler's:
 - **You may whisper at most 40 different people a day**, with smaller per-second and per-minute limits on top.
 - **Twitch may quietly drop a whisper** it does not like, while still reporting success. That is why Chattler says *Sent*, never *Delivered*.
 - A first message to somebody can be 500 characters; once they have whispered you, 10,000.
+
+## Just for one channel
+
+What matters in one chat rarely matters in another. The **⚙** on a chat's own header opens the settings for **that channel alone**, and the cog turns the accent colour while it has any.
+
+**Highlight words here**
+- Words you add are **on top of** the ones in Settings, not instead of them. Your username and your usual words still highlight everywhere.
+- They apply straight away to the lines already on screen, not only to new ones.
+- Remove one with its **×**. Remove the last one and the channel goes back to the usual words.
+
+**Quick buttons here** *(mods only)*
+- Pick the buttons you want on every message **in this channel**, from the same list as Settings.
+- Picking none is a real choice: that channel gets no quick buttons, while the others keep theirs.
+- **Same as everywhere** appears once the channel has its own set, and puts it back.
+
+Everything is remembered per channel, and a channel with nothing set keeps nothing - closing the tab does not lose it, and reopening the chat brings it back.
+
+---
 
 ## Settings reference
 
