@@ -249,6 +249,8 @@ Click any **username** (or an `@mention`) to open their card.
 
 **What's on it**
 - Avatar, display name, when their account was created, follower count and bio.
+- **Subscribed: Yes** (in green, with the months in brackets) or **Subscribed: No** (in red). Taken from the subscriber badge on their most recent message in this chat, so it needs no permissions and works in every channel - and is left out for anyone who has not spoken here yet. The months are the figure Twitch puts on the badge.
+- If their sub has ended, it says **Subscribed: No (was 27 months)**, with the date it lapsed on hover. Twitch keeps no public record of a sub that has finished, so this is only what Chattler has watched happen: it covers subs that end while you are running, and starts empty each time you open Chattler.
 - **Following since** - when they started following this channel, with how long ago that is, right under the joined line. *Mods only*: Twitch tells a channel's moderators and its broadcaster, nobody else, so the line is left out in channels you do not moderate rather than guessing. It says **Not following** when they never have.
 - **Monitor user** - see [Monitor user](#monitor-user).
 - **Messages** - what they've said in this chat this session, with deleted ones struck through.
@@ -290,7 +292,14 @@ Each line starts with a small, fixed column of buttons, so they never move under
 | **10m** | Time the person out for 10 minutes |
 | 🔨 | Ban the person |
 
-Choose which buttons appear in **Settings → Moderation → Quick buttons**: Delete, 1s, 1m, 5m, 10m, 30m, 1h, 1d, 1w, Ban. **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
+Build the row yourself in **Settings → Moderation → Quick buttons on each message**:
+
+- **Delete message** and **Ban** are either on the row or not - click to turn each on or off.
+- **The timeouts are yours**: type a length and press Enter. Plain numbers are seconds, and `45`, `10m`, `1h30m`, `2d` all work. Each one becomes a chip; click its **×** to drop it.
+- They sort themselves - Delete first, then the timeouts shortest to longest, then Ban - so the row stays in a sensible order however you add them.
+- Room for eight buttons, and two weeks is the longest Twitch allows.
+
+A **1s** button is the purge: it clears what someone has said without really timing them out.
 
 A single channel can have a different set: open **⚙** on its header and pick there. See [Just for one channel](#just-for-one-channel).
 
@@ -348,7 +357,11 @@ Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow m
 Invalid values show the correct usage instead of guessing.
 
 ### The Moderate panel (user card)
-1s, 1m, 5m, 10m, 30m, 1h, 1d and 1w timeouts, in two rows of four; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings). **1s** is the purge.
+**Time out for** - type how long and press **Time out** (or Enter). Plain numbers are seconds, and `10m`, `1h30m`, `2d` and the like all work. As you type it tells you what it will do (*Times them out for 1m 30s*), and it will not send a length Twitch would refuse - the ceiling is two weeks. A one second timeout is the purge: it clears what someone has said without really timing them out.
+
+Then **Ban**, **Unban** and **Warn**, and an optional **reason** box (required for warnings).
+
+For one-click lengths, use the [quick buttons on each message](#quick-buttons-on-every-message) - those are still a row of set ones, and can differ [per channel](#just-for-one-channel).
 
 ### Staff history
 In channels you moderate, user cards have a **Staff history** tab that records **who did what, and when**:
@@ -587,7 +600,8 @@ What matters in one chat rarely matters in another. The **⚙** on a chat's own 
 - Remove one with its **×**. Remove the last one and the channel goes back to the usual words.
 
 **Quick buttons here** *(mods only)*
-- Pick the buttons you want on every message **in this channel**, from the same list as Settings.
+- Build the row for **this channel** the same way as in Settings: Delete and Ban on or off, and any lengths you type.
+- It starts as a copy of your usual row, and the first change you make here is what sets the channel apart.
 - Picking none is a real choice: that channel gets no quick buttons, while the others keep theirs.
 - **Same as everywhere** appears once the channel has its own set, and puts it back.
 
@@ -630,7 +644,7 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | **Moderation** | Highlight suspicious users | Off |
 | | Pause chat while hovering | Off |
 | | Pause for | While hovering |
-| | Quick buttons on each message | Delete, 10m, Ban |
+| | Quick buttons on each message (Delete, Ban, and any lengths you add) | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
 
 ---
