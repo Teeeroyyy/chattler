@@ -357,11 +357,9 @@ Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow m
 Invalid values show the correct usage instead of guessing.
 
 ### The Moderate panel (user card)
-**Time out for** - type how long and press **Time out** (or Enter). Plain numbers are seconds, and `10m`, `1h30m`, `2d` and the like all work. As you type it tells you what it will do (*Times them out for 1m 30s*), and it will not send a length Twitch would refuse - the ceiling is two weeks. A one second timeout is the purge: it clears what someone has said without really timing them out.
+**1s**, **1m**, **5m**, **30m**, **1d** and **1w** timeouts, in two rows of three; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings). **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
 
-Then **Ban**, **Unban** and **Warn**, and an optional **reason** box (required for warnings).
-
-For one-click lengths, use the [quick buttons on each message](#quick-buttons-on-every-message) - those are still a row of set ones, and can differ [per channel](#just-for-one-channel).
+For lengths of your own, set the [quick buttons on each message](#quick-buttons-on-every-message), which take any length you type and can differ [per channel](#just-for-one-channel).
 
 ### Staff history
 In channels you moderate, user cards have a **Staff history** tab that records **who did what, and when**:
