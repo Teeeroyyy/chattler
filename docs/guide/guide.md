@@ -363,6 +363,8 @@ Twitch doesn't let apps download a channel's full moderation history, so actions
 ### Mod actions window
 Click **Mod actions** in the toolbar to open a window listing **every moderator action** in the channels you moderate, newest first, as they happen: timeouts and bans (with duration and reason), deleted messages (with the text), warnings, unbans, VIP and mod changes, chat mode changes, blocked terms and raids.
 
+**Blocked and permitted terms** are recorded here whichever way they go - added or removed, by you or by anyone else on the team, with the words themselves. Nothing in the chat says a term changed, since it happens away from the chat, so turn on **Settings -> AutoMod (moderators) -> Blocked terms in chat** if you would rather see it there too: *Blocked term added: "freegiftcards.example" by Ottertail.*
+
 - It's its own window: put it anywhere on your screen or on another monitor, and resize it from its edges.
 - Click the **pin** in its header to keep it on top of everything.
 - Pick a channel from the drop-down to show only that channel.
@@ -594,6 +596,7 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | | Ding sound (with Test) · Whisper tone (with Test) | Off · Off |
 | | Highlighted in chat · Flash taskbar · Desktop notification | all Off |
 | **AutoMod (moderators)** | Show held messages in chat · Highlight held messages · Stack held messages when busy | all Off |
+| | Blocked terms in chat | Off |
 | | AutoMod chime (with Test) | Off |
 | **Plugins** | Each plugin on or off, with its own settings | all off |
 | **Monitored users** | Everyone you're monitoring, with colour and Stop monitoring | - |
