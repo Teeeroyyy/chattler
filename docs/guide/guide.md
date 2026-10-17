@@ -228,7 +228,7 @@ Channel point redemptions appear in the chat.
 
 **Settings → Highlights**
 
-- **Highlight words**: type a word and press **Add** (or Enter). Each word appears as a chip; click **×** to remove it. Matching ignores capitals.
+- **Highlight words**: type a word and press **Add** (or Enter). Each word appears as a chip; click **×** to remove it. Matching ignores capitals. Adding or removing one changes the lines already on screen too, in every chat, not only the messages that follow.
 - **Your username** is always highlighted when someone mentions you, and replies to you count too.
 - **Just for one channel**: the **⚙** on a chat's header adds words that only highlight there. They work alongside the ones here, not instead of them - see [Just for one channel](#just-for-one-channel).
 
