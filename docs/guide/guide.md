@@ -249,6 +249,7 @@ Click any **username** (or an `@mention`) to open their card.
 
 **What's on it**
 - Avatar, display name, when their account was created, follower count and bio.
+- **Following since** - when they started following this channel, with how long ago that is, right under the joined line. *Mods only*: Twitch tells a channel's moderators and its broadcaster, nobody else, so the line is left out in channels you do not moderate rather than guessing. It says **Not following** when they never have.
 - **Monitor user** - see [Monitor user](#monitor-user).
 - **Messages** - what they've said in this chat this session, with deleted ones struck through.
 - **Staff history** tab - *mods only*, see [Staff history](#staff-history).
@@ -696,6 +697,8 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 **I don't see mod buttons.** You need to be a moderator (or the broadcaster) in *that* channel. Also check the chat's **🔨** toggle isn't switched off, and Settings → Moderation → Quick buttons.
 
 **Staff history only shows my own entries.** Team history comes from other moderators using Chattler 1.9 or later. If nobody else on the team uses it yet, you'll only see what your own Chattler recorded.
+
+**"Following since" isn't showing on cards.**  It needs a newer Twitch permission. Log out (Settings -> Account) and use **Log in with Twitch** again. It only appears in channels you moderate, and never on your own card.
 
 **Suspicious users aren't showing.**  This needs newer Twitch permissions. Log out (Settings -> Account) and use **Log in with Twitch** again. It only works in channels you moderate.
 
