@@ -97,8 +97,8 @@ You only log in once; Chattler renews your login in the background. To switch ac
 **Toolbar, the row below the tabs**
 
 - **📌 Pin** - lock the window in place and keep it on top.
-- **🛡 Mod actions** - opens the [Mod actions window](#mod-actions-window).
-- **★ Subs** - opens the [Subs window](#subs-window).
+- **🛡 Mod actions** - opens the [Mod actions](#mod-actions) panel under the chat.
+- **★ Subs** - opens the [Subs window](#subs).
 - **🔔 Highlights** - opens the [Highlights window](#highlights-window).
 - **💬 Whispers** - opens the [Whispers panel](#whispers), with a count of anything unread.
 - **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
@@ -249,12 +249,11 @@ Click any **username** (or an `@mention`) to open their card.
 
 **What's on it**
 - Avatar, display name, when their account was created, follower count and bio.
-- **Subscribed: Yes** (in green, with the months in brackets) or **Subscribed: No** (in red). Taken from the subscriber badge on their most recent message in this chat, so it needs no permissions and works in every channel - and is left out for anyone who has not spoken here yet. The months are the figure Twitch puts on the badge.
-- If their sub has ended, it says **Subscribed: No (was 27 months)**, with the date it lapsed on hover. Twitch keeps no public record of a sub that has finished, so this is only what Chattler has watched happen: it covers subs that end while you are running, and starts empty each time you open Chattler.
+- **Subscribed: Yes** (in green, with the months in brackets) or **Subscribed: No** (in red), read straight off the subscriber badge Twitch attaches to their most recent message in this chat. It needs no permissions and works in every channel, and is left out for anyone who has not spoken here yet. The months are Twitch's own figure.
 - **Following since** - when they started following this channel, with how long ago that is, right under the joined line. *Mods only*: Twitch tells a channel's moderators and its broadcaster, nobody else, so the line is left out in channels you do not moderate rather than guessing. It says **Not following** when they never have.
 - **Monitor user** - see [Monitor user](#monitor-user).
-- **Messages** - what they've said in this chat this session, with deleted ones struck through.
-- **Staff history** tab - *mods only*, see [Staff history](#staff-history).
+- **Recent messages** - their last 15 lines in this chat, with deleted ones struck through. A pinned card keeps up as they talk, still showing the newest 15.
+- **Staff history** tab - *mods only*. Everything Chattler has recorded about them in this channel, kept on this PC and added to every time you run it, plus whatever your mod team's copies of Chattler have shared. See [Staff history](#staff-history).
 - **Moderate** panel - *mods only*.
 - **Whisper**, **Mention**, **View on Twitch**.
 - **Twitch usercard** - opens Twitch's own card for that person in this channel, in your browser. It holds the history Twitch keeps: their messages and the bans and timeouts from before you were watching, which Chattler cannot see. Moderators get the moderation part of it; anyone can see the rest.
@@ -357,7 +356,7 @@ Toggle **Emote only**, **Subscribers only** and **Unique chat**; choose **Slow m
 Invalid values show the correct usage instead of guessing.
 
 ### The Moderate panel (user card)
-**1s**, **1m**, **5m**, **30m**, **1d** and **1w** timeouts, in two rows of three; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings). **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
+**1s**, **1m**, **5m**, **30m**, **1d** and **1w** timeouts, in one row of small buttons the size of the ones on a message; **Ban**, **Unban** and **Warn**; and an optional **reason** box (required for warnings). **1s** is the purge - a one second timeout, which clears what someone has said without really timing them out.
 
 For lengths of your own, set the [quick buttons on each message](#quick-buttons-on-every-message), which take any length you type and can differ [per channel](#just-for-one-channel).
 
@@ -377,26 +376,27 @@ Where the history comes from:
 
 Twitch doesn't let apps download a channel's full moderation history, so actions from before anyone on the team used Chattler can't be shown.
 
-### Mod actions window
-Click **Mod actions** in the toolbar to open a window listing **every moderator action** in the channels you moderate, newest first, as they happen: timeouts and bans (with duration and reason), deleted messages (with the text), warnings, unbans, VIP and mod changes, chat mode changes, blocked terms and raids.
+### Mod actions
+Click **Mod actions** in the toolbar to open a panel under the chat listing **every moderator action** in the channels you moderate, newest first, as they happen: timeouts and bans (with duration and reason), deleted messages (with the text), warnings, unbans, VIP and mod changes, chat mode changes, blocked terms and raids.
 
 **Blocked and permitted terms** are recorded here whichever way they go - added or removed, by you or by anyone else on the team, with the words themselves. Nothing in the chat says a term changed, since it happens away from the chat, so turn on **Settings -> AutoMod (moderators) -> Blocked terms in chat** if you would rather see it there too: *Blocked term added: "freegiftcards.example" by Ottertail.*
 
-- It's its own window: put it anywhere on your screen or on another monitor, and resize it from its edges.
-- Click the **pin** in its header to keep it on top of everything.
+- It sits **under the chat**, which keeps its full width. Open Subs or Highlights as well and they share the space side by side.
+- **Pop out** with the arrow in its header to move it into a window of its own - put it on another monitor, resize it from its edges, and **pin** it on top of everything. Close that window and it comes back under the chat.
+- Click the button in the toolbar again to put the panel away.
 - Pick a channel from the drop-down to show only that channel.
-- Click a name to open that person's user card, popped out next to the window.
+- Click a name to open that person's user card.
 - It also lists **shoutouts**, **AutoMod approvals and denials** (“Ottertail approved a held message from grumbleweed”) and **suspicious-user changes**.
 - It opens with recent history from your PC **and from your mod team** - actions other moderators’ Chattler recorded while yours was closed (last 7 days) - then fills in live.
 - If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.
 - It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
 
-### Subs window
-Click **Subs** in the toolbar for a window listing **every subscription, resub, gift and Prime upgrade** in your open chats, newest at the bottom. Sub notices keep appearing in chat as usual - this is an extra place to watch them all together.
+### Subs
+Click **Subs** in the toolbar for a panel under the chat listing **every subscription, resub, gift and Prime upgrade** in your open chats, newest at the bottom. Sub notices keep appearing in chat as usual - this is an extra place to watch them all together.
 
 - Lines read like “MintyMoss subscribed with Prime”, “Quillfeather resubscribed at Tier 1 - 14 months, 5 month streak”, “BytePilot gifted a Tier 1 sub to lanternjay” and “Ottertail gifted 10 Tier 2 subs to the channel”, with anything the subscriber wrote quoted underneath.
 - The header counts this session’s subs and gifted subs.
-- Like the Mod actions window: move it anywhere, resize it, pin it on top, filter by channel, and click a name to open that person’s user card.
+- Like Mod actions: it sits under the chat, pops out into its own window from the arrow in its header, filters by channel, and a name opens that person’s user card.
 - It works in **every chat you have open**, not only channels you moderate, and needs no extra permissions.
 
 ### Monitor user
@@ -439,7 +439,7 @@ Twitch quietly flags people who look like trouble: **likely ban evaders**, peopl
 - **Monitored people:** their messages appear in chat as normal, with a **red tint** and a tag saying **Monitored**. Hover the tag to see why Twitch flagged them.
 - **Restricted people:** their messages never reach chat at all - nobody else sees them. Chattler shows them to moderators as a **red card** marked "only moderators see this", so you can decide what to do.
 - **Setting someone's status:** on those cards, **Monitor**, **Restrict** and **No restrictions** change how Twitch treats them, the same as Twitch's own mod tools.
-- **Changes are logged:** when anyone on the team changes a person's status, it appears in the [Mod actions window](#mod-actions-window), for example "Ottertail marked Watched as restricted".
+- **Changes are logged:** when anyone on the team changes a person's status, it appears in the [Mod actions window](#mod-actions), for example "Ottertail marked Watched as restricted".
 - **Turning the tint off:** Settings -> Moderation -> **Highlight suspicious users**. The tag stays either way.
 
 This needs Chattler's suspicious-users permissions. If you logged in before this feature existed, log out and use **Log in with Twitch** again.
@@ -552,7 +552,7 @@ Save it as `shouty.chatt` in `%APPDATA%\Chatter\plugins`, click **Reload** in Se
 
 ## Highlights window
 
-The **🔔 Highlights** button opens a window listing every message that **mentioned you, replied to you, or matched one of your highlight words**, from every chat you have open. The word that caught it is marked, so you can see why it was picked up.
+The **🔔 Highlights** button opens a panel under the chat listing every message that **mentioned you, replied to you, or matched one of your highlight words**, from every chat you have open. The word that caught it is marked, so you can see why it was picked up.
 
 - Newest at the bottom, with new arrivals flagged for 15 seconds.
 - **Channel filter** to narrow it to one chat.
