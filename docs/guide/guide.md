@@ -400,7 +400,8 @@ Click **Mod chat** for a room shared by the people who moderate that channel - s
 - **Only moderators of that channel can get in**, and Twitch decides who they are: Chattler asks Twitch whether you moderate the channel, and the room opens only if the answer is yes. Nobody hands out an invite, and there is nothing to join.
 - **The broadcaster is in it too.** It is their channel, so treat it as a team room rather than a place to talk about the streamer.
 - **Badges say who is who**: the broadcaster, a **lead moderator** (Twitch's role for mods who can add and remove other mods), and a moderator. The broadcaster is certain - it is their channel - and so is being a moderator, which Twitch is asked directly. The lead badge is the one Twitch put on that person in this channel, read from their own account; Twitch gives apps no way to ask about somebody else's, so that is where it comes from. Everyone in the room is a confirmed moderator either way.
-- One room per channel. The drop-down in the header picks which one you are looking at when you moderate more than one, and the toolbar button carries a count of anything you have not read.
+- **It is always the chat you are reading.** One room per channel, and the panel follows whichever chat you are in - its header says which one, and so does the message box. There is nothing to pick, so a message cannot land in the wrong team’s room. Click another chat and the panel moves with you; the toolbar button carries a count of anything unread anywhere.
+- In a chat you do not moderate the panel says so and the box is greyed out.
 - It arrives through **Chattler's own server**, not Twitch. Nothing said here appears in chat, in your Twitch whispers, or anywhere on Twitch.
 - Messages are kept for **48 hours** so someone coming on shift can catch up, then they are deleted. The room holds the last 500.
 - **Streamer mode hides it**, since what the team says to each other is not for a stream.
