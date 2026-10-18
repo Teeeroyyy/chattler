@@ -250,7 +250,8 @@ Click any **username** (or an `@mention`) to open their card.
 
 **What's on it**
 - Avatar, display name, when their account was created, follower count and bio.
-- **Subscribed: Yes** (in green, with the months in brackets) or **Subscribed: No** (in red), read straight off the subscriber badge Twitch attaches to their most recent message in this chat. It needs no permissions and works in every channel, and is left out for anyone who has not spoken here yet. The months are Twitch's own figure.
+- **Subscribed: Yes** (in green, with the months in brackets) or **Subscribed: No** (in red), read straight off the subscriber badge Twitch attaches to their most recent message in this chat. It needs no permissions and works in every channel, and the months are Twitch’s own figure. If that message was more than an hour ago the card says how old the answer is - “Subscribed: Yes (14 months) · 3h ago” - and for someone never seen in this chat it says **not known** rather than nothing at all.
+- In a **quiet or offline channel** nobody is talking, so there are no badges to read. Turn on **Settings → Chat → Load recent messages on join** and Chattler reads the last couple of hours when it joins, which is usually enough to answer for the regulars.
 - **Following since** - when they started following this channel, with how long ago that is, right under the joined line. *Mods only*: Twitch tells a channel's moderators and its broadcaster, nobody else, so the line is left out in channels you do not moderate rather than guessing. It says **Not following** when they never have.
 - **Monitor user** - see [Monitor user](#monitor-user).
 - **Recent messages** - their last 15 lines in this chat, with deleted ones struck through. A pinned card keeps up as they talk, still showing the newest 15.
