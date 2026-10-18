@@ -395,6 +395,16 @@ Click **Mod actions** in the toolbar to open a panel under the chat listing **ev
 - If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.
 - It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
 
+### Polls and predictions
+Turn on **Settings -> Moderation -> Polls and predictions** and a button appears beside Settings, for whichever chat you are reading if you moderate it.
+
+- **Two clicks to start one.** The panel keeps presets - a title, the options and a length - so the usual question is one click. Underneath is a short form for anything else: a title, up to five options for a poll or ten for a prediction, and a length of 30s, 1m, 2m or 5m.
+- **Typing is faster**: `/poll Do we run it back? | Yes | No | 60` and `/pred Will they clutch it? | Yes | No | 90`. Leave the number off and it uses 60 seconds for a poll, 90 for a prediction.
+- **While one is running** the panel draws it the way Twitch does: a bar each with the share of the vote, the points staked and how many people backed it, and the time left. A poll can be ended early. A prediction can be **locked**, then paid out to one side with a click, or **refunded** so everyone gets their points back. Paying out asks first, since Twitch cannot undo it.
+- **Voting and spending points happen on Twitch**, not here. There is no API for either, for any app - so the panel has a **Vote on Twitch** button that opens the channel.
+- **Twitch's own limits apply**: polls and predictions are for **Affiliate and Partner** channels, and Twitch grants permission to the channel's own account. In your own channel everything works. In a channel you moderate Chattler asks anyway and shows you whatever Twitch answers.
+- The first time, **log out and log in again** so the permission can be granted.
+
 ### Mod chat
 Click **Mod chat** for a room shared by the people who moderate that channel - somewhere to say "I'm watching this one" without it going out to chat.
 
@@ -672,6 +682,7 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | **Moderation** | Highlight suspicious users | Off |
 | | Pause chat while hovering | Off |
 | | Pause for | While hovering |
+| | Polls and predictions | Off |
 | | Mod chat | Off |
 | | Quick buttons on each message (Delete, Ban, and any lengths you add) | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
