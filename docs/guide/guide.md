@@ -402,7 +402,7 @@ Turn on **Settings -> Moderation -> Polls and predictions** and a button appears
 - **Typing is faster**: `/poll Do we run it back? | Yes | No | 60` and `/pred Will they clutch it? | Yes | No | 90`. Leave the number off and it uses 60 seconds for a poll, 90 for a prediction.
 - **While one is running** the panel draws it the way Twitch does: a bar each with the share of the vote, the points staked and how many people backed it, and the time left. A poll can be ended early. A prediction can be **locked**, then paid out to one side with a click, or **refunded** so everyone gets their points back. Paying out asks first, since Twitch cannot undo it.
 - **Voting and spending points happen on Twitch**, not here. There is no API for either, for any app - so the panel has a **Vote on Twitch** button that opens the channel.
-- **Twitch's own limits apply**: polls and predictions are for **Affiliate and Partner** channels, and Twitch grants permission to the channel's own account. In your own channel everything works. In a channel you moderate Chattler asks anyway and shows you whatever Twitch answers.
+- **Twitch’s own limits apply**: polls and predictions are for **Affiliate and Partner** channels, and Twitch gives them to the channel’s **own account**. In your own channel everything works. In a channel you only moderate Twitch refuses - moderators cannot run or even read them, however the permission is granted - and the panel says so rather than leaving you guessing.
 - The first time, **log out and log in again** so the permission can be granted.
 
 ### Mod chat
