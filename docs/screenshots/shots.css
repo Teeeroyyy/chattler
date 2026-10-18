@@ -1,26 +1,53 @@
-.shots { max-width: var(--max); margin: 0 auto; padding: 48px 24px 80px; display: grid; gap: 40px; }
+.shots { max-width: var(--max); margin: 0 auto; padding: 44px 24px 90px; display: grid; gap: 28px; }
 .shots-head { text-align: center; }
 .shots-head h1 { font-size: clamp(36px, 5vw, 56px); font-weight: 800; margin-bottom: 14px; }
 .shots-head .lede { margin: 0 auto; }
 
+/* Jump straight to the part you came for. */
+.shot-jump { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 18px; padding: 0; list-style: none; }
+.shot-jump a {
+  display: block; padding: 7px 14px; border-radius: 999px; font-size: 14px; color: var(--text-2);
+  border: 1px solid var(--line); background: rgba(255, 255, 255, .02);
+}
+.shot-jump a:hover { color: var(--text); border-color: #33405a; background: rgba(255, 255, 255, .05); }
+
+.shot-group { display: grid; gap: 22px; scroll-margin-top: 90px; }
+.shot-group > header { display: grid; gap: 6px; justify-items: center; text-align: center; }
+.shot-group h2 { font-size: clamp(24px, 3vw, 32px); font-weight: 700; }
+.shot-group header p { margin: 0; color: var(--text-2); max-width: 640px; }
+
 .shot { margin: 0; display: grid; gap: 14px; justify-items: center; min-width: 0; }
-.shot a { display: block; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .09); background: #111318; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .8); transition: border-color .2s, transform .2s; }
-.shot a:hover { border-color: color-mix(in srgb, var(--mint) 45%, transparent); transform: translateY(-2px); }
+.shot a {
+  display: block; border-radius: 14px; overflow: hidden; border: 1px solid rgba(255, 255, 255, .09);
+  background: #111318; box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .8);
+  transition: border-color .2s, transform .2s, box-shadow .2s;
+}
+.shot a:hover { border-color: color-mix(in srgb, var(--mint) 45%, transparent); transform: translateY(-2px); box-shadow: 0 36px 70px -24px rgba(0, 0, 0, .9); }
 .shot img { width: 100%; height: auto; display: block; }
 .shot figcaption { color: var(--text-2); font-size: 15px; line-height: 1.55; max-width: 620px; text-align: center; }
 .shot figcaption b { color: var(--text); display: block; font-family: var(--display); font-size: 17px; font-weight: 700; margin-bottom: 4px; }
 
 .shot.wide a { max-width: 1040px; }
-.shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start; }
-.shot-row .shot a { max-width: 480px; }
+.shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: start; }
+.shot-row.three { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.shot-row .shot figcaption { font-size: 14.5px; }
+.shot-row.tall .shot a { max-width: 420px; }
 
-.shots-foot { text-align: center; color: var(--text-3); margin: 0; }
+/* The themes, side by side, each one a corner of the same chat. */
+.theme-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.theme-grid figcaption { font-size: 14.5px; }
+.theme-grid figcaption b { font-size: 16px; }
+
+.shots-foot { text-align: center; color: var(--text-3); margin: 10px 0 0; }
 .nav nav a[aria-current="page"] { color: var(--text); background: rgba(255, 255, 255, .06); }
 
+@media (max-width: 980px) {
+  .shot-row.three { grid-template-columns: 1fr 1fr; }
+}
 @media (max-width: 860px) {
-  .shot-row { grid-template-columns: 1fr; gap: 36px; }
+  .shot-row, .shot-row.three, .theme-grid { grid-template-columns: 1fr; gap: 30px; }
 }
 @media (max-width: 640px) {
-  .shots { padding: 28px 16px 60px; gap: 32px; }
+  .shots { padding: 26px 16px 60px; gap: 24px; }
   .shot figcaption { font-size: 14.5px; }
 }

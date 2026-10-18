@@ -381,7 +381,7 @@ Click **Mod actions** in the toolbar to open a panel under the chat listing **ev
 
 **Blocked and permitted terms** are recorded here whichever way they go - added or removed, by you or by anyone else on the team, with the words themselves. Nothing in the chat says a term changed, since it happens away from the chat, so turn on **Settings -> AutoMod (moderators) -> Blocked terms in chat** if you would rather see it there too: *Blocked term added: "freegiftcards.example" by Ottertail.*
 
-- It sits **under the chat**, which keeps its full width. Open Subs or Highlights as well and they share the space side by side.
+- It sits **under the chat**, which keeps its full width. Open Subs or Highlights as well and they share the space side by side. Drag a panel by its name to reorder them, and see [Where the panels go](#where-the-panels-go) to stack them down the right instead.
 - **Pop out** with the arrow in its header to move it into a window of its own - put it on another monitor, resize it from its edges, and **pin** it on top of everything. Close that window and it comes back under the chat.
 - Click the button in the toolbar again to put the panel away.
 - Pick a channel from the drop-down to show only that channel.
@@ -470,6 +470,13 @@ Drag the **top or bottom edge** to the edge of the screen and the window fills t
 ### Tab position
 Settings → Appearance → **Tab position: Top / Left**. **Left** puts tabs in a sidebar with full names and a **+ New tab** button; drag tabs up and down to reorder.
 
+### Where the panels go
+Settings → Appearance → **Mod actions, Subs and Highlights: Chat on top / Chat on the left**.
+
+- **Chat on top** puts the panels in a row underneath the chat. **Chat on the left** stacks them down the right-hand side.
+- **Drag the divider** between the chat and the panels to give either one more room. Each arrangement remembers its own size.
+- **Drag a panel by its name** to put them in the order you want - Highlights first, say. The order is remembered, including where a panel you have closed will reappear.
+
 ### Themes and text
 **Dark**, **Midnight** (pure black, good for OLED screens) and **Light**; chat text size 11-20px; compact messages; timestamps; 24-hour clock; badges on or off.
 
@@ -556,7 +563,8 @@ The **🔔 Highlights** button opens a panel under the chat listing every messag
 
 - Newest at the bottom, with new arrivals flagged for 15 seconds.
 - **Channel filter** to narrow it to one chat.
-- **Text size slider** and **pin**, like the other tool windows.
+- **Text size slider** and **pin**, like the other panels.
+- **Pop out** with the arrow in its header for a window of its own, and drag it by its name to move it above or below the other panels.
 - Click a name to open that person's user card.
 
 Highlights keep showing in chat as normal; this is a second place to catch the ones that went past while you were reading something else. The window holds the last 500 for the session and does not write them to disk.
@@ -627,6 +635,7 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | | Show badges | Off |
 | | Background transparency | 100% |
 | | Tab position (Top / Left) | Top |
+| | Mod actions, Subs and Highlights (Chat on top / Chat on the left) | Chat on top |
 | | Streamer mode | Off |
 | **Highlights** | Highlight words | none |
 | | Ding sound (with Test) · Whisper tone (with Test) | Off · Off |
