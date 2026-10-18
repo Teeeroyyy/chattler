@@ -396,14 +396,32 @@ Click **Mod actions** in the toolbar to open a panel under the chat listing **ev
 - It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
 
 ### Polls and predictions
-Turn on **Settings -> Moderation -> Polls and predictions** and a button appears beside Settings, for whichever chat you are reading if you moderate it.
+Turn on **Settings -> Moderation -> Polls and predictions**, then type them in the message box like any other moderation command.
 
-- **Two clicks to start one.** The panel keeps presets - a title, the options and a length - so the usual question is one click. Underneath is a short form for anything else: a title, up to five options for a poll or ten for a prediction, and a length of 30s, 1m, 2m or 5m.
-- **Typing is faster**: `/poll Do we run it back? | Yes | No | 60` and `/pred Will they clutch it? | Yes | No | 90`. Leave the number off and it uses 60 seconds for a poll, 90 for a prediction.
-- **While one is running** the panel draws it the way Twitch does: a bar each with the share of the vote, the points staked and how many people backed it, and the time left. A poll can be ended early. A prediction can be **locked**, then paid out to one side with a click, or **refunded** so everyone gets their points back. Paying out asks first, since Twitch cannot undo it.
-- **Voting and spending points happen on Twitch**, not here. There is no API for either, for any app - so the panel has a **Vote on Twitch** button that opens the channel.
-- **Twitch’s own limits apply**: polls and predictions are for **Affiliate and Partner** channels, and Twitch gives them to the channel’s **own account**. In your own channel everything works. In a channel you only moderate Twitch refuses - moderators cannot run or even read them, however the permission is granted - and the panel says so rather than leaving you guessing.
-- The first time, **log out and log in again** so the permission can be granted.
+```
+/prediction --title "Do they clear it without dying?" --duration 5m --choice "Flawless" --choice "Not a chance"
+/lockprediction                      stop the betting
+/comprediction --choice "Flawless"   pay that side out
+/cancelprediction                    give everyone their points back
+
+/poll --title "Run it back?" --duration 2m --choice "Yes" --choice "No"
+/endpoll                             finish it now
+```
+
+- **`--duration`** takes `90`, `90s` or `5m`, and can be left out: a minute for a poll, ninety seconds for a prediction. Twitch allows 15 seconds to 30 minutes for a poll, and 30 seconds to 30 minutes for a prediction.
+- **`--choice`** repeats - two to five for a poll, two to ten for a prediction. Quotes are only needed when the words have spaces in them.
+- The last three act on whatever is running, so they need nothing else. **`/comprediction`** takes the winning side by name; get the name wrong and Chattler lists the real ones.
+- Each one says what happened: *"Prediction started in emberlark"*, *"Paid out Flawless"*. Paying out cannot be undone, which is Twitch's rule, so be sure before you press enter.
+- Viewers still vote and spend their points **on Twitch** - no app can do that part, for anybody.
+
+### Letting your moderators run polls
+Twitch takes a poll or a prediction only from the channel's own account, so your moderators cannot run one for you however you set them up. **Settings -> Moderation -> Let my mods run polls and predictions** fixes that, once.
+
+- It is a **separate Twitch login** that grants exactly two permissions - polls and predictions - and nothing else. Your normal Chattler login is untouched.
+- That permission is kept by **Chattler's server**, not on your PC, which is what lets it work when your Chattler is closed.
+- Anyone **Twitch** calls a moderator of your channel can then start, end, lock, pay out or refund - including spending your viewers' channel points on a prediction. Think about that before turning it on.
+- **Every one is recorded** with the moderator's name and what they asked for, listed under the button.
+- **Disconnect whenever you like**, from the same place, or revoke Chattler on [Twitch's Connections page](https://www.twitch.tv/settings/connections). Either stops it immediately.
 
 ### Mod chat
 Click **Mod chat** for a room shared by the people who moderate that channel - somewhere to say "I'm watching this one" without it going out to chat.
@@ -743,6 +761,7 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 - Your Twitch login stays encrypted on your PC. Chattler only records your **Twitch username**, the **app version** and **when you last used it**, for usage statistics. Your chats and messages are never shared. Chattler's owner can use this to restrict an account from using Chattler.
 - **If you're a moderator:** the moderation actions you see in channels you moderate (bans, timeouts, deleted messages, warnings, VIP and mod changes) are shared with that channel's other moderators for their Staff history. Only confirmed moderators of that channel can see them.
 - **Mod chat** (off unless you turn it on) sends what you type there to Chattler's server, which passes it to the other moderators of that channel and keeps it for 48 hours before deleting it. Only people Twitch calls moderators of that channel - the broadcaster among them - can read it. It is not end-to-end encrypted, and it never reaches Twitch.
+- **Letting your moderators run polls** (off unless you turn it on) keeps a Twitch permission for your channel on Chattler's server - polls and predictions only, nothing else, and no part of your normal login. It is used when a confirmed moderator of your channel asks for a poll or prediction, and each one is recorded with their name. Disconnecting in Settings deletes it.
 - Chattler talks to Twitch (chat, login, moderation), 7TV, BetterTTV, FrankerFaceZ and ivr.fi (emotes, badges, profiles, live status), recent-messages.robotty.de (chat history - can be turned off in Settings), and GitHub (updates). Links you click open in your normal browser.
 
 ---
