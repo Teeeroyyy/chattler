@@ -387,7 +387,7 @@ Click **Mod actions** in the toolbar to open a panel under the chat listing **ev
 - It sits **under the chat**, which keeps its full width. Open Subs or Highlights as well and they share the space side by side. Drag a panel by its name to reorder them, and see [Where the panels go](#where-the-panels-go) to stack them down the right instead.
 - **Pop out** with the arrow in its header to move it into a window of its own - put it on another monitor, resize it from its edges, and **pin** it on top of everything. Close that window and it comes back under the chat.
 - Click the button in the toolbar again to put the panel away.
-- Pick a channel from the drop-down to show only that channel.
+- **It shows the chat you are reading**, and its header says which one. Click another chat and the panel moves with you - there is no channel to pick, so nothing from one channel is ever mistaken for another.
 - Click a name to open that person's user card.
 - It also lists **shoutouts**, **AutoMod approvals and denials** (“Ottertail approved a held message from grumbleweed”) and **suspicious-user changes**.
 - It opens with recent history from your PC **and from your mod team** - actions other moderators’ Chattler recorded while yours was closed (last 7 days) - then fills in live.
@@ -413,7 +413,7 @@ Click **Subs** in the toolbar for a panel under the chat listing **every subscri
 
 - Lines read like “MintyMoss subscribed with Prime”, “Quillfeather resubscribed at Tier 1 - 14 months, 5 month streak”, “BytePilot gifted a Tier 1 sub to lanternjay” and “Ottertail gifted 10 Tier 2 subs to the channel”, with anything the subscriber wrote quoted underneath.
 - The header counts this session’s subs and gifted subs.
-- Like Mod actions: it sits under the chat, pops out into its own window from the arrow in its header, filters by channel, and a name opens that person’s user card.
+- Like Mod actions: it sits under the chat, pops out into its own window from the arrow in its header, shows the chat you are reading, and a name opens that person’s user card.
 - It works in **every chat you have open**, not only channels you moderate, and needs no extra permissions.
 
 ### Monitor user
@@ -486,6 +486,9 @@ Drag the **top or bottom edge** to the edge of the screen and the window fills t
 
 ### Tab position
 Settings → Appearance → **Tab position: Top / Left**. **Left** puts tabs in a sidebar with full names and a **+ New tab** button; drag tabs up and down to reorder.
+
+### Each chat keeps its own panels
+Which panels are open is remembered **per channel**. Open Mod actions and Mod chat while you are reading one channel, click another, and that one shows its own - the toolbar buttons light up for the chat in front of you, not for somewhere else. Pop a panel out into a window of its own and it stays put whichever chat you move to.
 
 ### Where the panels go
 Settings → Appearance → **Mod actions, Subs and Highlights: Chat on top / Chat on the left**.
@@ -579,7 +582,7 @@ Save it as `shouty.chatt` in `%APPDATA%\Chatter\plugins`, click **Reload** in Se
 The **🔔 Highlights** button opens a panel under the chat listing every message that **mentioned you, replied to you, or matched one of your highlight words**, from every chat you have open. The word that caught it is marked, so you can see why it was picked up.
 
 - Newest at the bottom, with new arrivals flagged for 15 seconds.
-- **Channel filter** to narrow it to one chat.
+- **The chat you are reading**, named in the header. Click another chat and the panel follows.
 - **Text size slider** and **pin**, like the other panels.
 - **Pop out** with the arrow in its header for a window of its own, and drag it by its name to move it above or below the other panels.
 - Click a name to open that person's user card.
