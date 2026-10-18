@@ -121,6 +121,24 @@ h2 { font-size: clamp(32px, 4vw, 48px); font-weight: 700; max-width: 720px; }
 .uc-shots img { border-radius: 12px; border: 1px solid rgba(255, 255, 255, .09); box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .75); }
 .uc-shots figcaption { margin-top: 12px; text-align: center; font: 12.5px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--text-3); }
 
+/* mod chat */
+.modchat { display: grid; gap: 40px; padding-top: 8px !important; padding-bottom: 96px !important; }
+.mc-copy { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 56px; align-items: start; }
+.mc-copy .uc-points { grid-column: 2; grid-row: 1 / span 3; margin-top: 30px; }
+.mc-lede { color: var(--text-2); font-size: 17px; margin: 20px 0 0; max-width: 480px; }
+/* The room fades into the page rather than ending on a hard edge. */
+.mc-shot { margin: 0; position: relative; }
+.mc-shot::before {
+  content: ""; position: absolute; inset: -6% 8% 10%;
+  background: radial-gradient(closest-side, rgba(155, 140, 255, .25), transparent);
+  filter: blur(40px); z-index: -1;
+}
+.mc-shot img {
+  width: 100%; height: auto; border-radius: 14px 14px 0 0;
+  border: 1px solid rgba(255, 255, 255, .09); border-bottom: 0;
+  mask-image: linear-gradient(to bottom, #000 58%, transparent 100%);
+}
+
 /* download */
 .download { padding-bottom: 88px !important; }
 .dl-card {

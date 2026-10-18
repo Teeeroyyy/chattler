@@ -42,7 +42,7 @@
   "description": "A fast, free Twitch chat client for Windows with tabs and splits, 7TV, BetterTTV and FrankerFaceZ emotes, and one-click moderation tools including AutoMod, staff history and user cards.",
   "applicationCategory": "CommunicationApplication",
   "operatingSystem": "Windows 10, Windows 11",
-  "softwareVersion": "1.24.4",
+  "softwareVersion": "1.24.5",
   "releaseNotes": "https://chattler.net/#releases",
   "downloadUrl": "https://chattler.net/#download",
   "installUrl": "https://chattler.net/#download",
@@ -217,6 +217,11 @@
         <p>Held messages show up where you're already looking, with Allow and Deny, the reason, and the flagged words underlined.</p>
       </article>
       <article class="card">
+        <div class="icon amber"><svg viewBox="0 0 24 24"><path d="M4 5h11v8H8l-3 2.6V13H4Zm13 3h3v11l-3-2.4H9V14"/></svg></div>
+        <h3>Mod chat</h3>
+        <p>A room only that channel’s moderators can read, with Twitch deciding who they are. <a href="#modchat">See it</a>.</p>
+      </article>
+      <article class="card">
         <div class="icon violet"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg></div>
         <h3>Channel points</h3>
         <p>Redemptions appear in chat. In your own channel you see the reward name and cost.</p>
@@ -269,6 +274,23 @@
     </div>
   </section>
 
+
+  <section id="modchat" class="modchat">
+    <div class="mc-copy">
+      <p class="kicker">Mod chat</p>
+      <h2>A room for the people who moderate.</h2>
+      <p class="mc-lede">Somewhere for the team to say "I'm watching this one" without it going out to chat. Twitch has no mods-only room, so Chattler gives you one.</p>
+      <ul class="uc-points">
+        <li><b>Twitch decides who gets in.</b> Chattler asks whether you moderate the channel, and the room opens only if the answer is yes. No invites, nothing to join, and someone who gets demodded is out.</li>
+        <li><b>Badges say who is who</b> - broadcaster, lead moderator, moderator - and names wear the colour they have in chat.</li>
+        <li><b>It never touches Twitch.</b> Nothing said here appears in chat or in whispers, and messages are deleted after 48 hours.</li>
+        <li><b>Streamer mode hides it completely</b>, while the room stays connected so nothing is missed.</li>
+      </ul>
+    </div>
+    <figure class="mc-shot">
+      <img src="assets/modchat.jpg?v=2026-10-18" alt="Chattler's Mod chat panel: the broadcaster, a lead moderator and a moderator talking about a spammer and an incoming raid, each with their Twitch badge." width="1300" height="297" loading="lazy">
+    </figure>
+  </section>
 
   <section id="make-it-yours" class="make">
     <div class="section-head">

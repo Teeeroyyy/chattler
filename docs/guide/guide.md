@@ -100,6 +100,7 @@ You only log in once; Chattler renews your login in the background. To switch ac
 - **🛡 Mod actions** - opens the [Mod actions](#mod-actions) panel under the chat.
 - **★ Subs** - opens the [Subs window](#subs).
 - **🔔 Highlights** - opens the [Highlights window](#highlights-window).
+- **💬 Mod chat** - opens the [Mod chat](#mod-chat) panel for the channel you moderate, with a count of anything unread.
 - **💬 Whispers** - opens the [Whispers panel](#whispers), with a count of anything unread.
 - **🎥 Streamer** - [Streamer mode](#streamer-mode-in-the-toolbar): hides your name and login codes, and silences sounds and notifications.
 - **⚙ Settings**.
@@ -280,6 +281,8 @@ Click any **username** (or an `@mention`) to open their card.
 ## Moderation
 
 ### Who gets the tools
+Lead moderators count as moderators everywhere in Chattler, so the mod tools, Staff history and mod chat all work the same for them.
+
 Moderator tools appear **only in channels where you're a moderator or the broadcaster**. In any other channel you see no mod buttons at all. Messages from other moderators and the broadcaster never get mod buttons (Twitch doesn't allow actioning them).
 
 ### Quick buttons on every message
@@ -390,6 +393,19 @@ Click **Mod actions** in the toolbar to open a panel under the chat listing **ev
 - It opens with recent history from your PC **and from your mod team** - actions other moderators’ Chattler recorded while yours was closed (last 7 days) - then fills in live.
 - If a channel you moderate isn’t being recorded, a warning at the top names it, so you know its actions can’t appear.
 - It works for channels you moderate that are open in Chattler (with Staff history permissions). Twitch doesn’t let apps read its own mod log, so anything from before anyone on the team ran Chattler isn’t available.
+
+### Mod chat
+Click **Mod chat** for a room shared by the people who moderate that channel - somewhere to say "I'm watching this one" without it going out to chat.
+
+- **Only moderators of that channel can get in**, and Twitch decides who they are: Chattler asks Twitch whether you moderate the channel, and the room opens only if the answer is yes. Nobody hands out an invite, and there is nothing to join.
+- **The broadcaster is in it too.** It is their channel, so treat it as a team room rather than a place to talk about the streamer.
+- **Badges say who is who**: the broadcaster, a **lead moderator** (Twitch's role for mods who can add and remove other mods), and a moderator. The broadcaster is certain - it is their channel - and so is being a moderator, which Twitch is asked directly. The lead badge is the one Twitch put on that person in this channel, read from their own account; Twitch gives apps no way to ask about somebody else's, so that is where it comes from. Everyone in the room is a confirmed moderator either way.
+- One room per channel. The drop-down in the header picks which one you are looking at when you moderate more than one, and the toolbar button carries a count of anything you have not read.
+- It arrives through **Chattler's own server**, not Twitch. Nothing said here appears in chat, in your Twitch whispers, or anywhere on Twitch.
+- Messages are kept for **48 hours** so someone coming on shift can catch up, then they are deleted. The room holds the last 500.
+- **Streamer mode hides it**, since what the team says to each other is not for a stream.
+- It is **off until you turn it on**: Settings -> Moderation -> **Mod chat**.
+- A line that could not be sent says so and is sent again by itself; it never disappears quietly.
 
 ### Subs
 Click **Subs** in the toolbar for a panel under the chat listing **every subscription, resub, gift and Prime upgrade** in your open chats, newest at the bottom. Sub notices keep appearing in chat as usual - this is an extra place to watch them all together.
@@ -651,6 +667,7 @@ Open with **⚙** or **Ctrl+,**. Every section starts closed - click a heading (
 | **Moderation** | Highlight suspicious users | Off |
 | | Pause chat while hovering | Off |
 | | Pause for | While hovering |
+| | Mod chat | Off |
 | | Quick buttons on each message (Delete, Ban, and any lengths you add) | Delete, 10m, Ban |
 | **Keyboard** | Shortcut list | - |
 
@@ -709,6 +726,7 @@ Chattler checks for updates when it starts and every 30 minutes, downloads them 
 **What's shared**
 - Your Twitch login stays encrypted on your PC. Chattler only records your **Twitch username**, the **app version** and **when you last used it**, for usage statistics. Your chats and messages are never shared. Chattler's owner can use this to restrict an account from using Chattler.
 - **If you're a moderator:** the moderation actions you see in channels you moderate (bans, timeouts, deleted messages, warnings, VIP and mod changes) are shared with that channel's other moderators for their Staff history. Only confirmed moderators of that channel can see them.
+- **Mod chat** (off unless you turn it on) sends what you type there to Chattler's server, which passes it to the other moderators of that channel and keeps it for 48 hours before deleting it. Only people Twitch calls moderators of that channel - the broadcaster among them - can read it. It is not end-to-end encrypted, and it never reaches Twitch.
 - Chattler talks to Twitch (chat, login, moderation), 7TV, BetterTTV, FrankerFaceZ and ivr.fi (emotes, badges, profiles, live status), recent-messages.robotty.de (chat history - can be turned off in Settings), and GitHub (updates). Links you click open in your normal browser.
 
 ---
